@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "currency": "CAD",
+  "visibility": "public_owner_authorized",
+  "source": "Owner-provided PlayNow screenshots October 23 2026",
+  "starting_bankroll": 50,
+  "settled": [
+    {
+      "date": "2026-10-13",
+      "description": "NHL 5-leg parlay",
+      "stake": 10,
+      "odds": 17.09,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-13",
+      "description": "NHL 4-leg parlay",
+      "stake": 10,
+      "odds": 6.49,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-13",
+      "description": "NHL same-game parlay McQueen/Sennecke goals",
+      "stake": 5,
+      "odds": 9.5,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-15",
+      "description": "Mixed 4-leg parlay",
+      "stake": 3,
+      "odds": 6.84,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-16",
+      "description": "NFL 4-leg parlay",
+      "stake": 0.15,
+      "odds": 13.43,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-16",
+      "description": "NFL doubles wager",
+      "stake": 18,
+      "odds": null,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-17",
+      "description": "NHL CAR/TBL/FLA/VGK 4-leg",
+      "stake": 3.85,
+      "odds": 4.23,
+      "return": 16.32,
+      "status": "won"
+    },
+    {
+      "date": "2026-10-19",
+      "description": "COL/SF -7.5/UTA triple",
+      "stake": 3,
+      "odds": 4.27,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-20",
+      "description": "MTL/WSH/CAR triple",
+      "stake": 2,
+      "odds": 3.11,
+      "return": 0,
+      "status": "lost"
+    },
+    {
+      "date": "2026-10-22",
+      "description": "SJS/CHI Bears/EDM/DET 4-leg (boosted)",
+      "stake": 2,
+      "odds": 11.11,
+      "return": 23.45,
+      "status": "won",
+      "boost_return_included": true
+    }
+  ],
+  "pending": [
+    {
+      "date": "2026-10-23",
+      "time_local": "14:07",
+      "description": "MIL Brewers/MTL Canadiens/NC State triple",
+      "legs": [
+        {
+          "pick": "Milwaukee Brewers ML",
+          "odds": 1.52
+        },
+        {
+          "pick": "Montreal Canadiens ML",
+          "odds": 1.62
+        },
+        {
+          "pick": "NC State ML",
+          "odds": 1.33
+        }
+      ],
+      "stake": 2,
+      "odds": 3.29,
+      "potential_return": 6.6,
+      "status": "pending",
+      "matched_assistant_ticket": true
+    },
+    {
+      "date": "2026-10-23",
+      "time_local": "14:20",
+      "description": "BOS Celtics/TOR Raptors/Virginia/COL Avalanche 4-leg",
+      "legs": [
+        {
+          "pick": "Boston Celtics ML",
+          "odds": 1.71
+        },
+        {
+          "pick": "Toronto Raptors ML",
+          "odds": 1.31
+        },
+        {
+          "pick": "Virginia ML",
+          "odds": 1.73
+        },
+        {
+          "pick": "Colorado Avalanche ML",
+          "odds": 1.76
+        }
+      ],
+      "stake": 2,
+      "odds": 6.85,
+      "potential_return": 13.71,
+      "status": "pending",
+      "matched_assistant_ticket": false
+    }
+  ],
+  "summary": {
+    "settled_count": 10,
+    "settled_wins": 2,
+    "settled_losses": 8,
+    "settled_stakes": 57,
+    "settled_returns": 39.77,
+    "settled_net": -17.23,
+    "pending_count": 2,
+    "pending_stakes": 4,
+    "available_balance": 28.77,
+    "starting_balance": 50
+  },
+  "notes": [
+    "Actual settled return is payout inclusive of stake.",
+    "Pending wagers do not enter settled ROI until graded.",
+    "Separate from assistant hypothetical $2 daily ticket ledger.",
+    "Do not treat screenshot displayed balance as a new deposit.",
+    "No betting account identifiers or ticket IDs published."
+  ]
+}
