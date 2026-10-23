@@ -112,3 +112,13 @@ class TrackingTests(unittest.TestCase):
             r=shadow_tracking(root,historical,[g]);s=r['metrics']['season_to_date_available_ledger']['2026-27']
             self.assertEqual((s['wins'],s['losses']),(1,1));self.assertEqual(r['same_game_disagreements']['graded'],2)
             self.assertEqual(historical[0]['v8_lite_winner'],'A')
+
+class CoverageTests(unittest.TestCase):
+    def test_daily_game_count_mismatch_blocks(self):
+        with self.assertRaises(ValueError):parse_day('2026-10-23',{'currentDate':'2026-10-23','games':[],'gameWeek':[{'date':'2026-10-23','numberOfGames':2}]},strict=True)
+    def test_no_game_day_does_not_require_icescope_refresh(self):
+        from pipeline import run
+        rows=[g for g in json.loads(Path('research/nhl-2026-recovered-games.json').read_text()) if 'home_goals' in g]
+        with tempfile.TemporaryDirectory() as d:
+            r=run(d,d,now=dt.datetime(2026,10,24,12,tzinfo=dt.timezone.utc),nhl_games=rows,nfl_games=[])
+            self.assertEqual(r['nhl']['status'],'no_games');self.assertEqual(r['v8']['status'],'no_games')

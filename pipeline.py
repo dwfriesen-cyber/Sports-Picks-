@@ -80,7 +80,9 @@ def run(root,source_dir,now=None,nhl_games=None,nfl_games=None,ice=None):
     try:
         if not safe_nhl:raise ValueError('NHL source coverage unavailable')
         original=json.loads(Path('ledgers/historical/imported-chat-picks.json').read_text())['days'].get(date)
-        if original:
+        if not any(g['date']==date for g in nhl_games):
+            report['v8']={'status':'no_games'}
+        elif original:
             report['v8']={'status':'preserved_historical','original_source_time':original['shadow_source_message_time'],'winner_order':original['shadow'],'note':'Original published V8-lite picks remain fixed. Newly downloaded inputs do not replace them.'}
         else:
             if ice is None:ice=shadow.collect(date,source_dir)

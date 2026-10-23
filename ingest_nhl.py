@@ -9,6 +9,9 @@ FIELDS=['date','game_id','home','away','home_goals','away_goals','home_shots','a
 def parse_day(day,payload,include_future=False,strict=False):
     if not isinstance(payload.get('games'),list):raise ValueError('NHL score payload missing games')
     if strict and payload.get('currentDate')!=day:raise ValueError('Wrong score date')
+    if strict:
+        expected=[d['numberOfGames'] for d in payload.get('gameWeek',[]) if d.get('date')==day]
+        if len(expected)!=1 or expected[0]!=len(payload['games']):raise ValueError('NHL daily game-count mismatch')
     rows=[]
     for g in payload['games']:
         if g.get('gameType')!=2:continue
