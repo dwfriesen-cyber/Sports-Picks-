@@ -31,10 +31,11 @@ Odds are market snapshots, not verified PlayNow prices. Bonus picks must be froz
 - World Series Milwaukee is a market favourite, not demonstrated value.
 No mathematically validated positive-EV bets today.
 
-## $2 Daily Ticket: Friday cross-sport triple (illustrative)
-Montreal ML (1.65) + Milwaukee ML (1.53) + NC State ML (1.33).
-Combined decimal = 3.357585 (~3.36); $2 return ~$6.72, profit ~$4.72 if all win.
-One NHL model leg and two market/judgment legs; not a validated positive-EV ticket. Do not automatically place bets.
+## $2 Daily Ticket: Friday cross-sport triple — revised active official featured selection
+Montreal Canadiens ML (indicative 1.65) + Milwaukee Brewers ML (indicative 1.53) + Toronto Raptors ML (indicative 1.32).
+Combined decimal 3.33234 (~3.33); theoretical $2 return $6.66 and profit $4.66 if all win (rounded to cents). Actual sportsbook odds and availability may differ.
+**Revision provenance:** Originally published with NC State as third leg; owner reported college football selection unavailable and requested Toronto instead. Original ticket superseded; retain in revision history, do not grade it as a separate active ticket. The replacement was published later on Oct 23; do not backdate to 7 AM or claim the original ticket was never published. Only grade the revised ticket if all selections were prospective at revision time.
+**Tracking policy:** This is the assistant's hypothetical $2 featured selection and is graded independently whether or not the owner bets it. Never count hypothetical stakes or payouts in the owner's real-money ledger. One NHL model leg and two market/judgment legs; no validated positive EV.
 
 ## Provenance
 - GitHub reconstructed model comparison: https://github.com/dwfriesen-cyber/Sports-Picks-/blob/build/v6-v7a-starter/reports/oct18-23-comparison.md
