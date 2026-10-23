@@ -66,3 +66,35 @@ class RecoveryTests(unittest.TestCase):
     def test_wrong_source_date_rejected(self):
         with self.assertRaises(ValueError):parse_day('2026-10-23',{'currentDate':'2026-10-22','games':[]},strict=True)
 if __name__=='__main__':unittest.main()
+
+class ShadowAndFreezeTests(unittest.TestCase):
+    def test_exact_icescope_population_and_values(self):
+        import gzip
+        from shadow import parse_icescope,predict
+        html=gzip.decompress(Path('tests/fixtures/icescope-20261023.html.gz').read_bytes()).decode()
+        ice=parse_icescope(html,'2026-10-23')
+        self.assertEqual(len(ice['values']),32)
+        with self.assertRaises(Exception):parse_icescope(html,'2026-10-22')
+        with self.assertRaises(Exception):parse_icescope(html,'2026-10-25')
+        picks=predict(json.loads(Path('research/nhl-2026-recovered-games.json').read_text()),'2026-10-23',ice)
+        self.assertEqual([p['winner'] for p in sorted(picks,key=lambda p:p['rank'])],['MTL','TBL'])
+    def test_v8_frozen_formula_and_b2b(self):
+        from shadow import strength
+        h=[(4,2,30,20,'2026-10-22')]*5
+        self.assertAlmostEqual(strength(h,2,'2026-10-23'),1+.5+.5-.15)
+    def test_sunday_international_freeze_and_monday_independent(self):
+        from pipeline import freeze_nfl
+        now=dt.datetime(2026,10,23,12,tzinfo=dt.timezone.utc)
+        games=[]
+        for i in range(1,4):
+            games.append(dict(game_id=str(i),season=2026,week=i,date=f'2026-10-0{i}',start_time=f'2026-10-0{i}T13:00:00Z',home='A',away='B',home_stats=dict(pf=30,pa=20,op=60,dp=60),away_stats=dict(pf=20,pa=30,op=60,dp=60),home_score=30,away_score=20))
+        games.extend([dict(game_id='4',season=2026,week=4,date='2026-10-22',start_time='2026-10-23T00:00:00Z',home='A',away='B',home_score=30,away_score=20),dict(game_id='5',season=2026,week=4,date='2026-10-25',start_time='2026-10-25T13:30:00Z',home='A',away='B',home_score=None,away_score=None)])
+        with tempfile.TemporaryDirectory() as d:
+            r=freeze_nfl(games,Path(d),now,'test',lambda:now)
+            self.assertEqual(r['v1_status'],'frozen');self.assertEqual(r['missed_dates'],['2026-10-22'])
+            self.assertLess(dt.datetime.fromisoformat(r['slates'][0]['frozen_at']),dt.datetime.fromisoformat(r['slates'][0]['picks'][0]['start_time'].replace('Z','+00:00')))
+    def test_pipeline_preserves_published_shadow_instead_of_recalculating(self):
+        from pipeline import run
+        with tempfile.TemporaryDirectory() as d:
+            r=run(d,d,now=dt.datetime(2026,10,23,12,tzinfo=dt.timezone.utc),nhl_games=json.loads(Path('research/nhl-2026-recovered-games.json').read_text()),nfl_games=[])
+            self.assertEqual(r['v8']['status'],'preserved_historical');self.assertEqual(r['v8']['winner_order'],['MTL','TBL'])

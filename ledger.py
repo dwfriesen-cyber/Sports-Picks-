@@ -32,16 +32,21 @@ def freeze(path,picks,now,input_hash,code_sha,kind):
 def grade(root,games,now):
     root=Path(root);lookup={str(g['game_id']):g for g in games};graded=[]
     for path in sorted((root/'frozen').glob('**/*.json')):
-        slate=json.loads(path.read_text())
-        if slate['kind']!='nhl_v6_v7a':continue
+        slate=json.loads(path.read_text());kind=slate['kind']
         for p in slate['picks']:
             g=lookup.get(str(p['game_id']))
-            if not g or 'home_goals' not in g:continue
-            actual=g['home'] if g['home_goals']>g['away_goals'] else g['away']
-            record={'game_id':str(g['game_id']),'forecast_sha256':digest(slate),'model':'nhl_v6_v7a','winner':p['winner'],'actual_winner':actual,'home_goals':g['home_goals'],'away_goals':g['away_goals'],'correct':p['winner']==actual,'rank':p['rank'],'top25':p['top25']}
-            # Outcome hash permits an explicit appended correction, never changing old grades.
+            if not g:continue
+            if kind=='nfl_v1_only':
+                if g.get('home_score') is None:continue
+                hs,ass=g['home_score'],g['away_score']
+            else:
+                if 'home_goals' not in g:continue
+                hs,ass=g['home_goals'],g['away_goals']
+            actual=None if hs==ass else g['home'] if hs>ass else g['away']
+            record={'game_id':str(g['game_id']),'date':p.get('date',g.get('date','unknown')),'forecast_sha256':digest(slate),'model':kind,'winner':p['winner'],'actual_winner':actual,'home_score':hs,'away_score':ass,'correct':None if actual is None else p['winner']==actual,'rank':p.get('rank'),'top25':p.get('top25')}
             version=digest(record)
-            target=root/'grading'/'nhl'/str(g['game_id'])/(version+'.json')
+            sport='nfl' if kind=='nfl_v1_only' else 'nhl' if kind=='nhl_v6_v7a' else 'v8'
+            target=root/'grading'/sport/str(g['game_id'])/(version+'.json')
             if target.exists():saved=json.loads(target.read_text())
             else:
                 saved=dict(record,graded_at=now.isoformat());append(target,saved)

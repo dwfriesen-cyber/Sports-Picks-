@@ -30,6 +30,10 @@ jobs:
           r=json.load(open('state/latest.json'))
           assert r['nhl']['status']=='frozen', r['nhl']
           assert len(r['nhl']['slate']['picks']) > 0
+          assert r['nfl']['v1_status']=='frozen', r['nfl']
+          assert sum(len(s['picks']) for s in r['nfl']['slates'])>0
+          assert r['nfl']['v3_status']=='blocked'
+          assert r['v8']['status'] in ('frozen','preserved_historical')
           assert all(p['winner'] in (p['home'],p['away']) and p['rank'] for p in r['nhl']['slate']['picks'])
           print('Verified actual predictions:',len(r['nhl']['slate']['picks']))
           PY

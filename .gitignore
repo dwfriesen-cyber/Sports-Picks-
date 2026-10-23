@@ -4,3 +4,4 @@ data/
 state/
 recovery/
 .TMP*
+reports/*-current-inputs.json

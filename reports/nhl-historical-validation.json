@@ -26,5 +26,5 @@
       "all_game_margins_match": true
     }
   ],
-  "v7_scope": "Exact ranking and winner parity using original archived pregame xG ratings; raw historical shot aggregation checked separately."
+  "v7_scope": "Full end-to-end parity from goals/shots and raw MoneyPuck 5v5 xG sums for all 3,936 historical games. All 3,773 eligible confidence margins match the original audit."
 }
