@@ -98,3 +98,17 @@ class ShadowAndFreezeTests(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             r=run(d,d,now=dt.datetime(2026,10,23,12,tzinfo=dt.timezone.utc),nhl_games=json.loads(Path('research/nhl-2026-recovered-games.json').read_text()),nfl_games=[])
             self.assertEqual(r['v8']['status'],'preserved_historical');self.assertEqual(r['v8']['winner_order'],['MTL','TBL'])
+
+class TrackingTests(unittest.TestCase):
+    def test_shadow_tracking_keeps_historical_picks_and_counts_future_separately(self):
+        from pipeline import shadow_tracking
+        from ledger import append
+        with tempfile.TemporaryDirectory() as d:
+            root=Path(d)
+            historical=[dict(game_id='old',date='2026-10-18',v8_lite_winner='A',v8_lite_rank=1,v6_winner='B',actual_winner='A')]
+            append(root/'frozen/v8/2026-10-24.json',{'picks':[dict(game_id='new',date='2026-10-24',winner='A',rank=1)]})
+            append(root/'frozen/nhl/2026-10-24.json',{'picks':[dict(game_id='new',date='2026-10-24',winner='B',rank=1)]})
+            g=dict(game_id='new',home='A',away='B',home_goals=0,away_goals=2)
+            r=shadow_tracking(root,historical,[g]);s=r['metrics']['season_to_date_available_ledger']['2026-27']
+            self.assertEqual((s['wins'],s['losses']),(1,1));self.assertEqual(r['same_game_disagreements']['graded'],2)
+            self.assertEqual(historical[0]['v8_lite_winner'],'A')

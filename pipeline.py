@@ -75,6 +75,7 @@ def run(root,source_dir,now=None,nhl_games=None,nfl_games=None,ice=None):
     except Exception as exc:report['nhl']={'status':'blocked','reason':str(exc)}
     if safe_nhl:
         report['historical']=historical_report(nhl_games)
+        append(root/'grading'/'historical'/(digest(report['historical'])+'.json'),report['historical'])
         Path('reports/nhl-current-inputs.json').write_text(json.dumps(nhl_games,indent=2))
     try:
         if not safe_nhl:raise ValueError('NHL source coverage unavailable')
@@ -97,12 +98,31 @@ def run(root,source_dir,now=None,nhl_games=None,nfl_games=None,ice=None):
     # Grade independently of today's freeze success, preserving every prior forecast.
     report['grading']=grade(root,(nhl_games or [])+(nfl_games or []),clock())
     report['prospective_summary']=grade_summary(report['grading'])
+    if safe_nhl:report['v8_tracking']=shadow_tracking(root,report['historical']['rows'],nhl_games)
     report['source_receipts']=[json.loads(p.read_text()) for p in sorted(Path(source_dir).glob('*.receipt.json'))]
     for receipt in report['source_receipts']:append(root/'source-receipts'/(digest(receipt)+'.json'),receipt)
     attempt=clock().strftime('%Y%m%dT%H%M%S%fZ')
     append(root/'runs'/(attempt+'.json'),report)
     (root/'latest.json').write_text(json.dumps(report,indent=2,allow_nan=False))
     return report
+
+def shadow_tracking(root,historical,games):
+    # Imported historical selections stay intact; append future shadow records by game ID.
+    rows={r['game_id']:dict(r,comparison_basis='retrospective V6 reconstruction') for r in historical}
+    finals={str(g['game_id']):g for g in games if 'home_goals' in g}
+    official={}
+    for path in sorted((root/'frozen'/'nhl').glob('*.json')):
+        for p in json.loads(path.read_text())['picks']:official[str(p['game_id'])]=p
+    for path in sorted((root/'frozen'/'v8').glob('*.json')):
+        for p in json.loads(path.read_text())['picks']:
+            gid=str(p['game_id'])
+            if gid in rows:raise ValueError('Prospective shadow overlaps preserved historical ledger')
+            g=finals.get(gid);v6=official.get(gid)
+            actual=None if not g else g['home'] if g['home_goals']>g['away_goals'] else g['away']
+            rows[gid]={'game_id':gid,'date':p['date'],'v8_lite_winner':p['winner'],'v8_lite_rank':p['rank'],'actual_winner':actual,'v6_winner':None if not v6 else v6['winner'],'comparison_basis':'prospective frozen V6' if v6 else 'V6 unavailable'}
+    batch=list(rows.values())
+    disagreements=[r for r in batch if r['actual_winner'] and r.get('v6_winner') and r['v6_winner']!=r['v8_lite_winner']]
+    return {'coverage_start':'2026-10-18','coverage_note':'Season totals cover the recovered ledger from October 18 onward; earlier picks were not recovered.','metrics':stats(batch,'v8_lite_winner','v8_lite_rank'),'same_game_disagreements':{'graded':len(disagreements),'v6_correct':sum(r['v6_winner']==r['actual_winner'] for r in disagreements),'v8_correct':sum(r['v8_lite_winner']==r['actual_winner'] for r in disagreements),'rows':disagreements}}
 
 def grade_summary(grades):
     result={}

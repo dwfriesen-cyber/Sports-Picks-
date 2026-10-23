@@ -13,7 +13,7 @@ concurrency:
   group: sports-picks-daily-ledger
   cancel-in-progress: false
 env:
-  SPORTS_SOURCE_SHA: 5c00877d55e81ab4df7393baabbb1d3ffd3eaef8
+  SPORTS_SOURCE_SHA: efa6f2c686d822fe2d1dde7a8098094523dbd750
 jobs:
   daily:
     runs-on: ubuntu-latest
