@@ -1,0 +1,3 @@
+# Data provenance and audit limits
+
+NHL official scores API: https://api-web.nhle.com/v1/score/YYYY-MM-DD . Only regular-season completed games; goals and shots must be present. V6 retrospective runs are reconstructed using earlier-date game data, never historical live predictions. V7-A confidence requires raw five-on-five xG; the current scaffold does not ingest this and must not label its ranks V7-A. No betting odds enter the V6 formula. No scheduled or paid jobs are enabled. Before production, validate predictions against the original historical audit and establish prospective timestamped immutable records.
