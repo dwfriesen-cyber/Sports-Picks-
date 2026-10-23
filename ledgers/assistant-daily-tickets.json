@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "ledger_type": "assistant_hypothetical_daily_ticket",
+  "currency": "CAD",
+  "policy": "One active revised ticket per date; preserve superseded versions. Track regardless of whether owner wagers. Never include in actual cash profit, stake, ROI or bankroll. Grade only selections made before event starts. Never overwrite the model's frozen picks.",
+  "entries": [
+    {
+      "date": "2026-10-23",
+      "ticket_name": "The Cross-Sport Triple",
+      "stake_hypothetical": 2.00,
+      "status": "pending",
+      "active_version": 2,
+      "versions": [
+        {
+          "version": 1,
+          "status": "superseded",
+          "reason": "NC State selection not available to owner",
+          "legs": [
+            {"sport":"NHL","selection":"Montreal Canadiens ML","indicative_decimal":1.65},
+            {"sport":"MLB","selection":"Milwaukee Brewers ML","indicative_decimal":1.53},
+            {"sport":"NCAAF","selection":"NC State ML","indicative_decimal":1.33}
+          ],
+          "indicative_combined_decimal": 3.357585
+        },
+        {
+          "version": 2,
+          "status": "active",
+          "reason": "Owner requested replacement of unavailable college football leg with Toronto Raptors",
+          "legs": [
+            {"sport":"NHL","selection":"Montreal Canadiens ML","indicative_decimal":1.65},
+            {"sport":"MLB","selection":"Milwaukee Brewers ML","indicative_decimal":1.53},
+            {"sport":"NBA","selection":"Toronto Raptors ML","indicative_decimal":1.32}
+          ],
+          "indicative_combined_decimal": 3.33234,
+          "theoretical_return_cad_rounded": 6.66,
+          "theoretical_profit_cad_rounded": 4.66,
+          "odds_verified_at_playnow": false,
+          "freeze_note": "Revised during Oct 23 conversation, not original 7 AM freeze. Verify each leg was pre-event at revision time before grading."
+        }
+      ]
+    }
+  ]
+}
