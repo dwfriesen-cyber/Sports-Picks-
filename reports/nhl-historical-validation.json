@@ -1,0 +1,30 @@
+{
+  "status": "passed",
+  "seasons": [
+    {
+      "season": 2023,
+      "games": 1259,
+      "v6_correct": 755,
+      "v7_top_correct": 257,
+      "v7_top_games": 383,
+      "all_game_margins_match": true
+    },
+    {
+      "season": 2024,
+      "games": 1258,
+      "v6_correct": 721,
+      "v7_top_correct": 249,
+      "v7_top_games": 386,
+      "all_game_margins_match": true
+    },
+    {
+      "season": 2025,
+      "games": 1256,
+      "v6_correct": 693,
+      "v7_top_correct": 230,
+      "v7_top_games": 381,
+      "all_game_margins_match": true
+    }
+  ],
+  "v7_scope": "Exact ranking and winner parity using original archived pregame xG ratings; raw historical shot aggregation checked separately."
+}
