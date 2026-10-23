@@ -1,9 +1,0 @@
-__pycache__/
-*.pyc
-data/
-state/
-recovery/
-.TMP*
-reports/*-current-inputs.json
-research-state/
-upstream-context/
