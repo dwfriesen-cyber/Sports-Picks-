@@ -1,3 +1,3 @@
-# Sports Picks
+# Sports Picks append-only data
 
-Research implementation of NHL V6/V7-A and future NFL models. Experimental; no production predictions or paid jobs enabled.
+Frozen predictions, input snapshots, grading records and run receipts. Only latest.json is replaceable. Initial NHL freeze recovered verbatim from successful engineering run 39994234211 before puck drop. Historical reconstructions are kept separate from prospective predictions.

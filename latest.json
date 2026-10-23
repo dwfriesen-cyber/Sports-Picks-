@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-10-23T17:20:38.096575+00:00",
+  "report_date": "2026-10-23",
+  "timezone": "America/Regina",
+  "valid_until": "2026-10-24T06:00:00-06:00",
+  "code_sha": "5c00877d55e81ab4df7393baabbb1d3ffd3eaef8",
+  "status": "partial",
+  "nhl": {
+    "status": "frozen",
+    "quality": {
+      "season": 2026,
+      "completed_games": 165,
+      "missing_xg_games": []
+    },
+    "slate": {
+      "schema_version": 1,
+      "kind": "nhl_v6_v7a",
+      "frozen_at": "2026-10-23T17:20:39.632969+00:00",
+      "input_sha256": "3df08052cef151ecc64727425b15973d18de43e6c6c28448f50edac370478ba9",
+      "code_sha": "5c00877d55e81ab4df7393baabbb1d3ffd3eaef8",
+      "picks": [
+        {
+          "away": "MTL",
+          "away_name": "Montreal Canadiens",
+          "confidence": 0.581690019306827,
+          "confidence_margin": -0.581690019306827,
+          "confidence_status": "V7-A xG ranking",
+          "date": "2026-10-23",
+          "eligible": true,
+          "game_id": "2026020166",
+          "home": "CHI",
+          "home_name": "Chicago Blackhawks",
+          "margin": -0.6812540034562885,
+          "model_version": "nhl-v6-v7a-original-20261016",
+          "prior_games": 9,
+          "rank": 1,
+          "start_time": "2026-10-24T00:00:00Z",
+          "top25": true,
+          "v1_margin": -0.6875708442945618,
+          "winner": "MTL"
+        },
+        {
+          "away": "TBL",
+          "away_name": "Tampa Bay Lightning",
+          "confidence": 0.10887324459090598,
+          "confidence_margin": -0.10887324459090598,
+          "confidence_status": "V7-A xG ranking",
+          "date": "2026-10-23",
+          "eligible": true,
+          "game_id": "2026020167",
+          "home": "COL",
+          "home_name": "Colorado Avalanche",
+          "margin": 0.005845621308286587,
+          "model_version": "nhl-v6-v7a-original-20261016",
+          "prior_games": 9,
+          "rank": 2,
+          "start_time": "2026-10-24T01:00:00Z",
+          "top25": false,
+          "v1_margin": -0.032646843930247194,
+          "winner": "COL"
+        }
+      ]
+    },
+    "grading": []
+  },
+  "nfl": {
+    "v1_status": "blocked",
+    "v3_status": "blocked",
+    "reason": "NFL weekly freeze missed earliest kickoff; no late weekly confidence slate issued",
+    "v3_reason": "Original fitted V1/V2 probability transforms, coefficients and V3 audit were not recoverable; no replacement confidence model is used."
+  },
+  "v8": {
+    "status": "blocked",
+    "reason": "IceScope last-five xgBalance60 source adapter pending validation; historical shadow ledger preserved."
+  }
+}
