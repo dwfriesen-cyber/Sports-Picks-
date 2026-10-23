@@ -44,3 +44,6 @@ Combined decimal 3.33234 (~3.33); theoretical $2 return $6.66 and profit $4.66 i
 - World Series schedule https://www.mlb.com/news/2026-mlb-playoff-and-world-series-schedule
 
 This file is a human-readable publication, NOT an input to the model engine. No automation or original frozen predictions modified.
+
+## Oct 23 post-publication ticket correction
+Owner subsequently confirmed NC State was available and placed the original Montreal + Milwaukee + NC State combination. Official hypothetical featured ticket ledger active version restored to original NC State selection; temporary Raptors replacement retained as superseded historical revision. The owner's separate actual PlayNow ticket is $2 stake, odds 3.29, potential return $6.60; not counted in the hypothetical bankroll. Actual ticket and personal financial details are not saved in this public report.
