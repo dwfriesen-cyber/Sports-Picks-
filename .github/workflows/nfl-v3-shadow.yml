@@ -1,0 +1,62 @@
+name: NFL V3 Reconstruction shadow pools
+on:
+  schedule:
+    # Daily checks freeze the upcoming week as soon as the preceding week is complete.
+    # 06:10, 06:30, 06:50 America/Regina; official 06:00 pipeline unchanged.
+    - cron: '10,30,50 12 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: [.github/workflows/nfl-v3-shadow.yml]
+permissions:
+  contents: write
+concurrency:
+  group: nfl-v3-reconstruction-ledger
+  cancel-in-progress: false
+env:
+  V3_SOURCE_SHA: 422b416db9dce4c03b0c141af22391ef6c7045f8
+jobs:
+  shadow:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.V3_SOURCE_SHA }}
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          repository: antonwilms/sleeper-dashboard-data
+          ref: 5231fb4c22923a344504fefdfe4b1520714dd5db
+          path: upstream-context
+          persist-credentials: false
+      - uses: actions/checkout@v4
+        with:
+          ref: nfl-v3-research-data
+          path: research-state/nfl-v3
+          persist-credentials: true
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Calculate independent research pool
+        run: python scripts/forecast_nfl_v3.py
+      - name: Preserve append-only research records
+        run: |
+          python scripts/validate_state_change.py research-state/nfl-v3
+          git -C research-state/nfl-v3 config user.name 'Sports Picks research automation'
+          git -C research-state/nfl-v3 config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git -C research-state/nfl-v3 add --all
+          if ! git -C research-state/nfl-v3 diff --cached --quiet; then
+            git -C research-state/nfl-v3 commit -m "NFL V3 Reconstruction shadow: ${GITHUB_RUN_ID}"
+            git -C research-state/nfl-v3 push origin HEAD:nfl-v3-research-data
+          fi
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nfl-v3-shadow-status
+          path: research-state/nfl-v3/latest.json
+          retention-days: 3
+          if-no-files-found: error

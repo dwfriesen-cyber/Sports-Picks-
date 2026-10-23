@@ -37,3 +37,7 @@ Only `latest.json` may change. Git commits preserve history; no force pushes, de
 Historical xG downloads can contain retrospective source revisions. Excluding future games prevents lookahead in the calculations; it cannot establish the original publication time of each source estimate. Current historical downloads reproduce the saved audits to numerical tolerance. The October reconstruction is not represented as originally timestamped live forecasting.
 
 Data credits: NHL official API; **MoneyPuck.com** downloadable shot data (noncommercial use); IceScope public processed metrics; nflverse/nfldata and nflverse/nflverse-data; the original historical NFL team context from antonwilms/sleeper-dashboard-data. No account credentials or premium feeds are needed.
+
+## NFL V3 Reconstruction research update
+
+A separate, fixed reconstruction now reproduces the reported 145/180 weekly top-quarter aggregate, versus raw V1 136/180. This does not establish exact restoration: V2 differs from the original report. Production winners and original-V3 unavailable status remain unchanged. See [measured results](reports/nfl-v3-reconstruction/REPORT.md), [exact coefficients](reports/nfl-v3-reconstruction/COEFFICIENTS.md), and [execution and shadow operations](reports/nfl-v3-reconstruction/OPERATIONS.md).
