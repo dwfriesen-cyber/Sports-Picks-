@@ -7,29 +7,53 @@
     {
       "date": "2026-10-23",
       "ticket_name": "The Cross-Sport Triple",
-      "stake_hypothetical": 2.00,
+      "stake_hypothetical": 2,
       "status": "pending",
-      "active_version": 2,
+      "active_version": 1,
       "versions": [
         {
           "version": 1,
-          "status": "superseded",
-          "reason": "NC State selection not available to owner",
+          "status": "restored_active",
+          "reason": "Originally published selection; owner later confirmed NC State became available and placed this exact combination before games",
           "legs": [
-            {"sport":"NHL","selection":"Montreal Canadiens ML","indicative_decimal":1.65},
-            {"sport":"MLB","selection":"Milwaukee Brewers ML","indicative_decimal":1.53},
-            {"sport":"NCAAF","selection":"NC State ML","indicative_decimal":1.33}
+            {
+              "sport": "NHL",
+              "selection": "Montreal Canadiens ML",
+              "indicative_decimal": 1.65
+            },
+            {
+              "sport": "MLB",
+              "selection": "Milwaukee Brewers ML",
+              "indicative_decimal": 1.53
+            },
+            {
+              "sport": "NCAAF",
+              "selection": "NC State ML",
+              "indicative_decimal": 1.33
+            }
           ],
           "indicative_combined_decimal": 3.357585
         },
         {
           "version": 2,
-          "status": "active",
-          "reason": "Owner requested replacement of unavailable college football leg with Toronto Raptors",
+          "status": "superseded",
+          "reason": "Temporary Raptors substitution requested when NC State unavailable; superseded after owner confirmed original ticket was placed",
           "legs": [
-            {"sport":"NHL","selection":"Montreal Canadiens ML","indicative_decimal":1.65},
-            {"sport":"MLB","selection":"Milwaukee Brewers ML","indicative_decimal":1.53},
-            {"sport":"NBA","selection":"Toronto Raptors ML","indicative_decimal":1.32}
+            {
+              "sport": "NHL",
+              "selection": "Montreal Canadiens ML",
+              "indicative_decimal": 1.65
+            },
+            {
+              "sport": "MLB",
+              "selection": "Milwaukee Brewers ML",
+              "indicative_decimal": 1.53
+            },
+            {
+              "sport": "NBA",
+              "selection": "Toronto Raptors ML",
+              "indicative_decimal": 1.32
+            }
           ],
           "indicative_combined_decimal": 3.33234,
           "theoretical_return_cad_rounded": 6.66,
@@ -37,7 +61,8 @@
           "odds_verified_at_playnow": false,
           "freeze_note": "Revised during Oct 23 conversation, not original 7 AM freeze. Verify each leg was pre-event at revision time before grading."
         }
-      ]
+      ],
+      "owner_match_note": "Owner's actual PlayNow ticket contains same three selections but different locked odds; record actual bet separately in private ledger. This does not retroactively erase temporary Raptors revision."
     }
   ]
 }
