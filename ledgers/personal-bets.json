@@ -85,32 +85,6 @@
       "return": 23.45,
       "status": "won",
       "boost_return_included": true
-    }
-  ],
-  "pending": [
-    {
-      "date": "2026-10-23",
-      "time_local": "14:07",
-      "description": "三场串关：密尔沃基酿酒人／蒙特利尔加拿大人／北卡罗来纳州立大学",
-      "legs": [
-        {
-          "pick": "密尔沃基酿酒人独赢",
-          "odds": 1.52
-        },
-        {
-          "pick": "蒙特利尔加拿大人独赢",
-          "odds": 1.62
-        },
-        {
-          "pick": "北卡罗来纳州立大学独赢",
-          "odds": 1.33
-        }
-      ],
-      "stake": 2,
-      "odds": 3.29,
-      "potential_return": 6.6,
-      "status": "pending",
-      "matched_assistant_ticket": true
     },
     {
       "date": "2026-10-23",
@@ -137,19 +111,48 @@
       "stake": 2,
       "odds": 6.85,
       "potential_return": 13.71,
+      "status": "lost",
+      "matched_assistant_ticket": false,
+      "return": 0,
+      "result_note": "弗吉尼亚大学16比19负于杜克，串关已无法获胜；波士顿107比103胜纽约，多伦多112比102胜华盛顿。科罗拉多比赛结果尚未核实。PlayNow实际结算状态待截图确认。",
+      "settlement_basis": "One losing leg mathematically eliminates standard four-leg parlay; sportsbook confirmation pending"
+    }
+  ],
+  "pending": [
+    {
+      "date": "2026-10-23",
+      "time_local": "14:07",
+      "description": "三场串关：密尔沃基酿酒人／蒙特利尔加拿大人／北卡罗来纳州立大学",
+      "legs": [
+        {
+          "pick": "密尔沃基酿酒人独赢",
+          "odds": 1.52
+        },
+        {
+          "pick": "蒙特利尔加拿大人独赢",
+          "odds": 1.62
+        },
+        {
+          "pick": "北卡罗来纳州立大学独赢",
+          "odds": 1.33
+        }
+      ],
+      "stake": 2,
+      "odds": 3.29,
+      "potential_return": 6.6,
       "status": "pending",
-      "matched_assistant_ticket": false
+      "matched_assistant_ticket": true
     }
   ],
   "summary": {
-    "settled_count": 10,
+    "settled_count": 11,
     "settled_wins": 2,
-    "settled_losses": 8,
-    "settled_stakes": 57,
+    "settled_losses": 9,
+    "settled_stakes": 59,
     "settled_returns": 39.77,
-    "settled_net": -17.23,
-    "pending_count": 2,
-    "pending_stakes": 4,
+    "settled_net": -19.23,
+    "pending_count": 1,
+    "pending_stakes": 2,
     "available_balance": 28.77,
     "starting_balance": 50
   },
