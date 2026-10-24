@@ -4,6 +4,7 @@ on:
     # Saskatchewan UTC-6 year-round. Target 06:00; bounded recovery at 06:20/06:40.
     - cron: '0,20,40 12 * * *'
   workflow_dispatch:
+    # 2026-10-24 recovery trigger: scheduled window missed; model/input SHA and freeze guards unchanged.
   push:
     branches: [main]
     paths: [.github/workflows/daily-picks.yml]
