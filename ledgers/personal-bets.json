@@ -239,7 +239,7 @@
     },
     {
       "date": "2026-10-25",
-      "description": "Four-leg parlay (partially visible): San Francisco 49ers / Florida Panthers / Colorado Avalanche / fourth selection not visible",
+      "description": "Four-leg ML parlay: San Francisco 49ers / Florida Panthers / Colorado Avalanche / Minnesota Wild",
       "stake": 2,
       "odds": 5.58,
       "potential_return": 11.16,
@@ -247,26 +247,27 @@
       "status": "pending",
       "legs": [
         {
-          "pick": "San Francisco 49ers",
-          "market_type": "not visible"
+          "pick": "San Francisco 49ers ML",
+          "odds": 1.65
         },
         {
-          "pick": "Florida Panthers",
-          "market_type": "not visible"
+          "pick": "Florida Panthers ML",
+          "odds": 1.54
         },
         {
-          "pick": "Colorado Avalanche",
-          "market_type": "not visible"
+          "pick": "Colorado Avalanche ML",
+          "odds": 1.42
         },
         {
-          "pick": "Fourth leg not visible",
-          "status": "unverified"
+          "pick": "Minnesota Wild ML",
+          "odds": 1.54
         }
       ],
-      "source": "Owner PlayNow screenshot Oct 25 7:35 AM; bet collapsed, market types and fourth leg not shown",
+      "source": "Owner PlayNow expanded screenshot Oct 25 2026 07:39 Saskatchewan, confirming ticket placed 07:35",
       "cashout_snapshot": 1.8,
       "matched_assistant_ticket": false,
-      "verification_needed": "Expand ticket to capture fourth selection and exact market types; preserve known fields."
+      "verification_needed": null,
+      "time_local": "07:35"
     }
   ],
   "summary": {
@@ -278,7 +279,7 @@
     "settled_net": -21.23,
     "pending_count": 3,
     "pending_stakes": 7,
-    "available_balance": 23.77,
+    "available_balance": 21.77,
     "starting_balance": 50
   },
   "notes": [
@@ -290,7 +291,8 @@
     "中文只是展示语言，不构成加密或隐私保护。",
     "2026-10-24 entry added from owner-provided PlayNow ticket. Summary available_balance 28.77 is last screenshot snapshot and has not been refreshed for later wagers; do not treat it as current balance.",
     "2026-10-25 independent score verification: Oct 23 NC State ML loss was graded mathematically, while actual operator settlement remains unconfirmed; Oct 24 PIT/MIN legs won and KC +2.5 remains unplayed. Previously recorded balance is a historical screenshot, not live.",
-    "2026-10-25 07:35 Saskatchewan screenshot shows three pending wagers and displayed $23.77 balance; cashout values are volatile snapshots, not settled returns. Four-leg $2 ticket fourth leg is obscured."
+    "2026-10-25 07:35 Saskatchewan screenshot shows three pending wagers and displayed $23.77 balance; cashout values are volatile snapshots, not settled returns. Four-leg $2 ticket fourth leg is obscured.",
+    "2026-10-25 07:39 owner expanded screenshot identifies four-leg 5.58 ticket's full moneyline legs, including Minnesota 1.54; displayed account balance $21.77. Balance snapshot differs from earlier $23.77 and is not inferred from stakes."
   ],
   "language": "zh-CN",
   "display_language": "简体中文",
