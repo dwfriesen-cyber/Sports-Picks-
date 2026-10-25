@@ -1,8 +1,9 @@
 name: Daily frozen sports predictions
 on:
   schedule:
-    # Saskatchewan UTC-6 year-round. Target 06:00; bounded recovery at 06:20/06:40.
-    - cron: '0,20,40 12 * * *'
+    # Saskatchewan UTC-6 year-round. Off-hour load-safe primary 06:07, recovery 06:25/06:43.
+    # GitHub schedule is best-effort; retained pre-first-puck freeze guard prevents backdating.
+    - cron: '7,25,43 12 * * *'
   workflow_dispatch:
     # 2026-10-24 recovery trigger: scheduled window missed; model/input SHA and freeze guards unchanged.
   push:
