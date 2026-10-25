@@ -277,7 +277,7 @@
     "settled_returns": 39.77,
     "settled_net": -21.23,
     "pending_count": 3,
-    "pending_stakes": null,
+    "pending_stakes": 7,
     "available_balance": 23.77,
     "starting_balance": 50
   },
