@@ -116,9 +116,7 @@
       "return": 0,
       "result_note": "弗吉尼亚大学16比19负于杜克，串关已无法获胜；波士顿107比103胜纽约，多伦多112比102胜华盛顿。科罗拉多比赛结果尚未核实。PlayNow实际结算状态待截图确认。",
       "settlement_basis": "One losing leg mathematically eliminates standard four-leg parlay; sportsbook confirmation pending"
-    }
-  ],
-  "pending": [
+    },
     {
       "date": "2026-10-23",
       "time_local": "14:07",
@@ -140,9 +138,20 @@
       "stake": 2,
       "odds": 3.29,
       "potential_return": 6.6,
-      "status": "pending",
-      "matched_assistant_ticket": true
-    },
+      "status": "lost",
+      "matched_assistant_ticket": true,
+      "return": 0,
+      "result_note": "Montreal defeated Chicago 4–1; Milwaukee defeated Tampa Bay 3–2 in World Series Game 1; NC State lost 28–31 at Stanford on Oct 23. One losing moneyline leg eliminates standard three-leg parlay.",
+      "settlement_basis": "Decisive on-field loss verified independently; exact PlayNow operator settlement still awaiting screenshot.",
+      "verified_on": "2026-10-25",
+      "result_sources": [
+        "https://www.nhl-schedules.com/season/2026-2027/10/23/",
+        "https://www.statmuse.com/mlb/ask/mlb-results-2026",
+        "https://www.cbssports.com/college-football/news/davis-warren-throws-4-tds-as-stanford-holds-off-nc-state-31-28/"
+      ]
+    }
+  ],
+  "pending": [
     {
       "date": "2026-10-24",
       "time_local": "15:21",
@@ -169,18 +178,38 @@
       "status": "pending",
       "matched_assistant_ticket": false,
       "source": "Owner-provided Oct 24 PlayNow ticket details; 3:21 PM local, per canonical template",
-      "settlement_note": "Await verified final outcomes and sportsbook settlement; do not infer payout from results alone."
+      "settlement_note": "Await verified final outcomes and sportsbook settlement; do not infer payout from results alone.",
+      "leg_results": [
+        {
+          "pick": "Pittsburgh Penguins ML",
+          "status": "won",
+          "final": "PIT 3–2 NSH (OT)",
+          "date": "2026-10-24"
+        },
+        {
+          "pick": "Minnesota Wild ML",
+          "status": "won",
+          "final": "MIN 5–1 SEA",
+          "date": "2026-10-24"
+        },
+        {
+          "pick": "Kansas City Chiefs +2.5 spread",
+          "status": "pending",
+          "scheduled_date": "2026-10-25"
+        }
+      ],
+      "outcome_checked_on": "2026-10-25"
     }
   ],
   "summary": {
-    "settled_count": 11,
+    "settled_count": 12,
     "settled_wins": 2,
-    "settled_losses": 9,
-    "settled_stakes": 59,
+    "settled_losses": 10,
+    "settled_stakes": 61,
     "settled_returns": 39.77,
-    "settled_net": -19.23,
-    "pending_count": 2,
-    "pending_stakes": 4,
+    "settled_net": -21.23,
+    "pending_count": 1,
+    "pending_stakes": 2,
     "available_balance": 28.77,
     "starting_balance": 50
   },
@@ -191,7 +220,8 @@
     "截图显示的余额不代表新的存款。",
     "公开文件不保存投注账户或票据编号。",
     "中文只是展示语言，不构成加密或隐私保护。",
-    "2026-10-24 entry added from owner-provided PlayNow ticket. Summary available_balance 28.77 is last screenshot snapshot and has not been refreshed for later wagers; do not treat it as current balance."
+    "2026-10-24 entry added from owner-provided PlayNow ticket. Summary available_balance 28.77 is last screenshot snapshot and has not been refreshed for later wagers; do not treat it as current balance.",
+    "2026-10-25 independent score verification: Oct 23 NC State ML loss was graded mathematically, while actual operator settlement remains unconfirmed; Oct 24 PIT/MIN legs won and KC +2.5 remains unplayed. Previously recorded balance is a historical screenshot, not live."
   ],
   "language": "zh-CN",
   "display_language": "简体中文",
