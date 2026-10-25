@@ -96,14 +96,14 @@
     },
     {
       "date": "2026-10-25",
-      "ticket_name": "Sunday NFL Moneyline Double",
+      "ticket_name": "Sunday NFL Three-Leg Moneyline",
       "stake_hypothetical": 2,
       "status": "pending",
-      "active_version": 1,
+      "active_version": 2,
       "versions": [
         {
           "version": 1,
-          "status": "active",
+          "status": "superseded",
           "publication_date": "2026-10-25",
           "publication_note": "Prepared during Sunday morning Daily Edge after fetching CBS Sports Oct 25 9 AM ET article. This is not a 6 AM frozen model prediction and has not been placed as a real wager.",
           "legs": [
@@ -134,7 +134,51 @@
           "theoretical_return_cad_rounded": 7.51,
           "theoretical_profit_cad_rounded": 5.51,
           "odds_verified_at_playnow": false,
-          "source_note": "Indicative sportsbook quotes published through CBS Sports, not separately verified executable prices or a placed ticket."
+          "source_note": "Indicative sportsbook quotes published through CBS Sports, not separately verified executable prices or a placed ticket.",
+          "superseded_note": "Owner instruction on Oct 25: avoid Kansas City vs Seattle because already on actual PlayNow ticket; two-leg parlays should not be default. Historical version retained."
+        },
+        {
+          "version": 2,
+          "status": "active",
+          "publication_date": "2026-10-25",
+          "publication_note": "Revised October 25 after owner explicitly excluded any game already on his pending real PlayNow ticket; original two-leg SF/KC ticket preserved, not retrospectively rewritten. Historical DraftKings indicative odds, not PlayNow verified.",
+          "legs": [
+            {
+              "sport": "NFL",
+              "selection": "San Francisco 49ers ML",
+              "market_type": "moneyline",
+              "american_odds": -148,
+              "indicative_decimal": 1.675676,
+              "book": "DraftKings via CBS Sports",
+              "source_url": "https://www.cbssports.com/betting/news/week-7-nfl-betting-lines-spreads-totals-odds/",
+              "sask_start": "2026-10-25 11:00"
+            },
+            {
+              "sport": "NFL",
+              "selection": "Minnesota Vikings ML",
+              "market_type": "moneyline",
+              "american_odds": -290,
+              "indicative_decimal": 1.344828,
+              "book": "DraftKings via CBS Sports",
+              "source_url": "https://www.cbssports.com/betting/news/week-7-nfl-betting-lines-spreads-totals-odds/",
+              "sask_start": "2026-10-25 11:00"
+            },
+            {
+              "sport": "NFL",
+              "selection": "Carolina Panthers ML",
+              "market_type": "moneyline",
+              "american_odds": -155,
+              "indicative_decimal": 1.645161,
+              "book": "DraftKings via CBS Sports",
+              "source_url": "https://www.cbssports.com/betting/news/week-7-nfl-betting-lines-spreads-totals-odds/",
+              "sask_start": "2026-10-25 11:00"
+            }
+          ],
+          "indicative_combined_decimal": 3.707363,
+          "theoretical_return_cad_rounded": 7.41,
+          "theoretical_profit_cad_rounded": 5.41,
+          "odds_verified_at_playnow": false,
+          "source_note": "CBS/DraftKings published Saturday Oct 24, retrieved Sunday October 25 around 7:15 AM Saskatchewan; informational indicative quotes only."
         }
       ]
     }
