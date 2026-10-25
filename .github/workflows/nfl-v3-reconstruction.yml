@@ -1,0 +1,68 @@
+name: Validate NFL V3 Reconstruction
+on:
+  push:
+    branches: [build/v6-v7a-starter]
+    paths:
+      - 'research_v3/**'
+      - 'tests_research/**'
+      - 'scripts/*v3*'
+      - 'research/NFL_V3_RECONSTRUCTION_PROTOCOL.md'
+      - '.github/workflows/nfl-v3-reconstruction.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/checkout@v4
+        with:
+          repository: antonwilms/sleeper-dashboard-data
+          ref: 5231fb4c22923a344504fefdfe4b1520714dd5db
+          path: upstream-context
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python -m pip install -r research_v3/requirements.txt
+      - name: Protect existing NHL and NFL V1 behavior
+        run: python -m unittest discover -s tests -v
+      - name: Verify research chronology, blending and weekly freezes
+        run: python -m unittest discover -s tests_research -v
+      - name: Download pinned original sources and refit all chronological folds
+        run: python scripts/reconstruct_nfl_v3.py --output recovery/nfl-v3
+      - name: Verify fresh data reproduces coefficients and complete audits
+        run: python scripts/check_nfl_v3_reproduction.py reports/nfl-v3-reconstruction recovery/nfl-v3
+      - name: Exercise actual weekly kickoff gate
+        run: python scripts/forecast_nfl_v3.py
+      - name: Verify fresh current-season EPA and red-zone inputs
+        run: python scripts/validate_v3_current_data.py 2026
+      - name: Inspect real output
+        run: |
+          python - <<'PY'
+          import json
+          r=json.load(open('recovery/nfl-v3/validation.json'))
+          assert r['combined']['n']==671
+          assert r['combined']['v1_wins']==429
+          assert r['combined']['top_quarter']['v3']['wins']==145
+          assert not r['exact_original_reproduced']
+          w=json.load(open('research-state/nfl-v3/latest.json'))
+          assert w['status'] in ('blocked','frozen_research_only')
+          print('Validated 671 actual held-out-year predictions; weekly output:',w['status'],w.get('reason',''))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: nfl-v3-reconstruction-evidence
+          path: |
+            recovery/nfl-v3/
+            research-state/nfl-v3/
+          retention-days: 3
+          if-no-files-found: error
