@@ -142,6 +142,34 @@
       "potential_return": 6.6,
       "status": "pending",
       "matched_assistant_ticket": true
+    },
+    {
+      "date": "2026-10-24",
+      "time_local": "15:21",
+      "description": "Pittsburgh Penguins ML / Minnesota Wild ML / Kansas City Chiefs +2.5 spread",
+      "legs": [
+        {
+          "pick": "Pittsburgh Penguins moneyline",
+          "odds": 1.8
+        },
+        {
+          "pick": "Minnesota Wild moneyline",
+          "odds": 1.58
+        },
+        {
+          "pick": "Kansas City Chiefs +2.5 points spread",
+          "odds": 1.91
+        }
+      ],
+      "stake": 2,
+      "odds": 5.46,
+      "boost_percent": 3,
+      "potential_return": 11.19,
+      "potential_profit": 9.19,
+      "status": "pending",
+      "matched_assistant_ticket": false,
+      "source": "Owner-provided Oct 24 PlayNow ticket details; 3:21 PM local, per canonical template",
+      "settlement_note": "Await verified final outcomes and sportsbook settlement; do not infer payout from results alone."
     }
   ],
   "summary": {
@@ -151,8 +179,8 @@
     "settled_stakes": 59,
     "settled_returns": 39.77,
     "settled_net": -19.23,
-    "pending_count": 1,
-    "pending_stakes": 2,
+    "pending_count": 2,
+    "pending_stakes": 4,
     "available_balance": 28.77,
     "starting_balance": 50
   },
@@ -162,7 +190,8 @@
     "与助手每日两加元模拟投注记录分开计算。",
     "截图显示的余额不代表新的存款。",
     "公开文件不保存投注账户或票据编号。",
-    "中文只是展示语言，不构成加密或隐私保护。"
+    "中文只是展示语言，不构成加密或隐私保护。",
+    "2026-10-24 entry added from owner-provided PlayNow ticket. Summary available_balance 28.77 is last screenshot snapshot and has not been refreshed for later wagers; do not treat it as current balance."
   ],
   "language": "zh-CN",
   "display_language": "简体中文",
