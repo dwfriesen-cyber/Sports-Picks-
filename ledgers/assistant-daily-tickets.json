@@ -8,7 +8,7 @@
       "date": "2026-10-23",
       "ticket_name": "The Cross-Sport Triple",
       "stake_hypothetical": 2,
-      "status": "pending",
+      "status": "lost",
       "active_version": 1,
       "versions": [
         {
@@ -62,7 +62,93 @@
           "freeze_note": "Revised during Oct 23 conversation, not original 7 AM freeze. Verify each leg was pre-event at revision time before grading."
         }
       ],
-      "owner_match_note": "Owner's actual PlayNow ticket contains same three selections but different locked odds; record actual bet separately in private ledger. This does not retroactively erase temporary Raptors revision."
+      "owner_match_note": "Owner's actual PlayNow ticket contains same three selections but different locked odds; record actual bet separately in private ledger. This does not retroactively erase temporary Raptors revision.",
+      "settlement": {
+        "graded_date": "2026-10-25",
+        "active_version": 1,
+        "grade": "lost",
+        "theoretical_return_cad": 0,
+        "net_profit_cad": -2,
+        "legs": [
+          {
+            "selection": "Montreal Canadiens ML",
+            "status": "won",
+            "final": "MTL 4–1 CHI"
+          },
+          {
+            "selection": "Milwaukee Brewers ML",
+            "status": "won",
+            "final": "MIL 3–2 TB (World Series G1)"
+          },
+          {
+            "selection": "NC State ML",
+            "status": "lost",
+            "final": "NCST 28–31 Stanford"
+          }
+        ],
+        "basis": "All three official finals independently checked; NC State loss defeats parlay. Superseded Raptors version preserved.",
+        "sources": [
+          "https://www.nhl-schedules.com/season/2026-2027/10/23/",
+          "https://www.statmuse.com/mlb/ask/mlb-results-2026",
+          "https://www.cbssports.com/college-football/news/davis-warren-throws-4-tds-as-stanford-holds-off-nc-state-31-28/"
+        ]
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "ticket_name": "Sunday NFL Moneyline Double",
+      "stake_hypothetical": 2,
+      "status": "pending",
+      "active_version": 1,
+      "versions": [
+        {
+          "version": 1,
+          "status": "active",
+          "publication_date": "2026-10-25",
+          "publication_note": "Prepared during Sunday morning Daily Edge after fetching CBS Sports Oct 25 9 AM ET article. This is not a 6 AM frozen model prediction and has not been placed as a real wager.",
+          "legs": [
+            {
+              "sport": "NFL",
+              "selection": "San Francisco 49ers ML",
+              "market_type": "moneyline",
+              "american_odds": -148,
+              "indicative_decimal": 1.675676,
+              "book": "DraftKings via CBS Sports",
+              "source_url": "https://www.cbssports.com/betting/news/week-7-nfl-betting-odds-spreads-lines-totals/",
+              "source_published": "2026-10-25 09:00 ET",
+              "sask_start": "2026-10-25 11:00"
+            },
+            {
+              "sport": "NFL",
+              "selection": "Kansas City Chiefs ML",
+              "market_type": "moneyline",
+              "american_odds": 124,
+              "indicative_decimal": 2.24,
+              "book": "DraftKings via CBS Sports",
+              "source_url": "https://www.cbssports.com/betting/news/week-7-nfl-betting-odds-spreads-lines-totals/",
+              "source_published": "2026-10-25 09:00 ET",
+              "sask_start": "2026-10-25 18:20"
+            }
+          ],
+          "indicative_combined_decimal": 3.753514,
+          "theoretical_return_cad_rounded": 7.51,
+          "theoretical_profit_cad_rounded": 5.51,
+          "odds_verified_at_playnow": false,
+          "source_note": "Indicative sportsbook quotes published through CBS Sports, not separately verified executable prices or a placed ticket."
+        }
+      ]
     }
-  ]
+  ],
+  "summary": {
+    "settled_count": 1,
+    "settled_wins": 0,
+    "settled_losses": 1,
+    "settled_stakes_cad": 2,
+    "settled_returns_cad": 0,
+    "net_cad": -2,
+    "pending_count": 1,
+    "pending_stakes_cad": 2,
+    "starting_hypothetical_bankroll_cad": null,
+    "bankroll_note": "No owner-approved starting hypothetical bankroll has been recorded; do not infer one."
+  }
 }
