@@ -235,7 +235,17 @@
       ],
       "source": "Owner PlayNow screenshot October 25 2026 7:28–7:35 AM Saskatchewan",
       "cashout_snapshot": 2.7,
-      "matched_assistant_ticket": false
+      "matched_assistant_ticket": false,
+      "leg_results": [
+        {
+          "pick": "Pittsburgh Steelers ML",
+          "status": "won",
+          "final": "PIT 16–10 NO",
+          "date": "2026-10-25",
+          "verified_source": "https://www.nfl.com/news/2026-nfl-season-week-7-what-we-learned-from-sunday-s-games"
+        }
+      ],
+      "outcome_checked_on": "2026-10-25"
     },
     {
       "date": "2026-10-25",
