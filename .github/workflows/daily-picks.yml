@@ -1,9 +1,10 @@
 name: Daily frozen sports predictions
 on:
   schedule:
-    # Saskatchewan UTC-6 year-round. Off-hour load-safe primary 06:07, recovery 06:25/06:43.
-    # GitHub schedule is best-effort; retained pre-first-puck freeze guard prevents backdating.
-    - cron: '7,25,43 12 * * *'
+    # Saskatchewan UTC-6 year-round. Earlier 05:37/05:53 probes and 06:09/06:29/06:47 recovery.
+    # Cron is best-effort. Extra staggered attempts mitigate missed/late starts; immutable freeze remains authoritative.
+    - cron: '37,53 11 * * *'
+    - cron: '9,29,47 12 * * *'
   workflow_dispatch:
     # 2026-10-24 recovery trigger: scheduled window missed; model/input SHA and freeze guards unchanged.
   push:
@@ -50,6 +51,24 @@ jobs:
             git -C state commit -m "Freeze and grade sports predictions: ${GITHUB_RUN_ID}"
             git -C state push origin HEAD:picks-data
           fi
+      - name: Verify today's NHL freeze and emit diagnostic
+        if: always() && steps.pipeline.outcome != 'skipped'
+        shell: bash
+        run: |
+          python - <<'PY'
+          import datetime,json,os
+          from pathlib import Path
+          from zoneinfo import ZoneInfo
+          p=Path('state/latest.json')
+          if not p.exists(): raise SystemExit('NHL_FREEZE_MISSING: state/latest.json absent')
+          d=json.loads(p.read_text())
+          day=datetime.datetime.now(ZoneInfo('America/Regina')).date().isoformat()
+          status=d.get('nhl',{}).get('status')
+          frozen=d.get('nhl',{}).get('slate',{}).get('frozen_at')
+          print(f'DAILY_NHL_CHECK expected={day} reported={d.get("report_date")} status={status} frozen_at={frozen} run_id={os.getenv("GITHUB_RUN_ID")}')
+          if d.get('report_date')!=day or status not in ('frozen','no_games'):
+            raise SystemExit('NHL_FREEZE_UNAVAILABLE: inspect earlier pipeline download/errors; no stale picks permitted')
+          PY
       - name: Retain compact evidence
         if: always()
         uses: actions/upload-artifact@v4
