@@ -278,6 +278,40 @@
       "matched_assistant_ticket": false,
       "verification_needed": null,
       "time_local": "07:35"
+    },
+    {
+      "date": "2026-10-26",
+      "time_local": "12:34",
+      "description": "Three-leg moneyline parlay: New York Rangers / Dallas Cowboys / Toronto Maple Leafs",
+      "legs": [
+        {
+          "pick": "New York Rangers ML",
+          "odds": 1.74,
+          "opponent": "Los Angeles Kings",
+          "start_time_sask": "17:00"
+        },
+        {
+          "pick": "Dallas Cowboys ML",
+          "odds": 1.44,
+          "opponent": "Philadelphia Eagles",
+          "start_time_sask": "18:15"
+        },
+        {
+          "pick": "Toronto Maple Leafs ML",
+          "odds": 1.71,
+          "opponent": "Calgary Flames",
+          "start_time_sask": "18:35"
+        }
+      ],
+      "stake": 7,
+      "odds": 4.29,
+      "potential_return": 30.08,
+      "potential_profit": 23.08,
+      "status": "pending",
+      "matched_assistant_ticket": false,
+      "source": "Owner PlayNow screenshot taken October 26 2026, 12:35 PM Saskatchewan; placed 12:34 PM",
+      "cashout_snapshot": 6.3,
+      "settlement_note": "Await final results and PlayNow settlement; original quoted odds and return are fixed."
     }
   ],
   "summary": {
@@ -287,9 +321,9 @@
     "settled_stakes": 61,
     "settled_returns": 39.77,
     "settled_net": -21.23,
-    "pending_count": 3,
-    "pending_stakes": 7,
-    "available_balance": 21.77,
+    "pending_count": 4,
+    "pending_stakes": 14,
+    "available_balance": 14.77,
     "starting_balance": 50
   },
   "notes": [
@@ -302,7 +336,8 @@
     "2026-10-24 entry added from owner-provided PlayNow ticket. Summary available_balance 28.77 is last screenshot snapshot and has not been refreshed for later wagers; do not treat it as current balance.",
     "2026-10-25 independent score verification: Oct 23 NC State ML loss was graded mathematically, while actual operator settlement remains unconfirmed; Oct 24 PIT/MIN legs won and KC +2.5 remains unplayed. Previously recorded balance is a historical screenshot, not live.",
     "2026-10-25 07:35 Saskatchewan screenshot shows three pending wagers and displayed $23.77 balance; cashout values are volatile snapshots, not settled returns. Four-leg $2 ticket fourth leg is obscured.",
-    "2026-10-25 07:39 owner expanded screenshot identifies four-leg 5.58 ticket's full moneyline legs, including Minnesota 1.54; displayed account balance $21.77. Balance snapshot differs from earlier $23.77 and is not inferred from stakes."
+    "2026-10-25 07:39 owner expanded screenshot identifies four-leg 5.58 ticket's full moneyline legs, including Minnesota 1.54; displayed account balance $21.77. Balance snapshot differs from earlier $23.77 and is not inferred from stakes.",
+    "Oct 26 at 12:35 PM Saskatchewan: PlayNow screenshot reports $14.77 displayed balance and a new $7 three-leg moneyline ticket at 4.29 with $30.08 potential return. Previous Oct 24–25 tickets still show pending in this ledger despite decisive losses; do not treat their status as operator-confirmed or report the old saved pending count as actual current PlayNow status."
   ],
   "language": "zh-CN",
   "display_language": "简体中文",
