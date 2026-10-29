@@ -71,6 +71,8 @@ class IndependentEvaluationTests(unittest.TestCase):
         self.assertEqual(results[0]["net"], -2)
         with self.assertRaises(ValueError):
             grade_tickets([t], [self.quote, q2], [], ["G2"])
+        with self.assertRaises(ValueError):
+            grade_tickets([t, dict(t, version=3)], [self.quote, q2], [])
 
 
 if __name__ == "__main__":
