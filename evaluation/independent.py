@@ -142,6 +142,7 @@ def grade_tickets(tickets, quotes, outcomes, owner_pending_game_ids=()):
     pending = set(owner_pending_game_ids)
     results = []
     seen = set()
+    active_dates = set()
     for ticket in tickets:
         key = (ticket["date"], ticket["version"])
         if key in seen:
@@ -149,6 +150,9 @@ def grade_tickets(tickets, quotes, outcomes, owner_pending_game_ids=()):
         seen.add(key)
         if ticket.get("status") != "active":
             continue
+        if ticket["date"] in active_dates:
+            raise ValueError("More than one active ticket for date: " + ticket["date"])
+        active_dates.add(ticket["date"])
         placed = instant(ticket["published_at"])
         legs = ticket["legs"]
         if len(legs) < 2 or len({x["game_id"] for x in legs}) != len(legs):
