@@ -1,0 +1,27 @@
+name: V6 retrospective audit
+on:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify engine and ingestion tests
+        run: python -m unittest discover -s tests -v
+      - name: Download official completed games
+        run: python ingest_nhl.py --start 2026-09-01 --end 2026-10-22 --output data/nhl_games.csv
+      - name: Reconstruct V6 picks without future games
+        run: python engine.py --games data/nhl_games.csv --from-date 2026-10-18 --output data/v6_retrospective.json
+      - name: Upload audit files
+        uses: actions/upload-artifact@v4
+        with:
+          name: nhl-v6-retrospective-unverified
+          path: data/
+          retention-days: 30

@@ -1,7 +1,8 @@
-name: Verify audited sports engine
+name: Verify research engine
 on:
   push:
-    branches: [main]
+    branches: [build/v6-v7a-starter]
+  pull_request:
   workflow_dispatch:
 permissions:
   contents: read
@@ -12,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: 073a17d3849db83f684a8273dec77993742eec5d
           persist-credentials: false
       - uses: actions/setup-python@v5
         with:

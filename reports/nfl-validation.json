@@ -1,0 +1,33 @@
+{
+  "v1_status": "passed",
+  "seasons": [
+    {
+      "year": 2021,
+      "games": 223,
+      "correct": 131
+    },
+    {
+      "year": 2022,
+      "games": 222,
+      "correct": 128
+    },
+    {
+      "year": 2023,
+      "games": 224,
+      "correct": 133
+    },
+    {
+      "year": 2024,
+      "games": 224,
+      "correct": 154
+    },
+    {
+      "year": 2025,
+      "games": 223,
+      "correct": 142
+    }
+  ],
+  "v3_status": "blocked",
+  "v3_reason": "Original fitted V1/V2 probability transforms, coefficients and V3 audit were not recoverable; no replacement confidence model is used.",
+  "reported_v3_top_quarter": "145/180; NOT reproduced"
+}
