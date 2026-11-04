@@ -98,7 +98,7 @@
       "date": "2026-10-25",
       "ticket_name": "Sunday NFL Three-Leg Moneyline",
       "stake_hypothetical": 2,
-      "status": "pending",
+      "status": "lost",
       "active_version": 2,
       "versions": [
         {
@@ -180,19 +180,50 @@
           "odds_verified_at_playnow": false,
           "source_note": "CBS/DraftKings published Saturday Oct 24, retrieved Sunday October 25 around 7:15 AM Saskatchewan; informational indicative quotes only."
         }
-      ]
+      ],
+      "settlement": {
+        "graded_date": "2026-11-04",
+        "active_version": 2,
+        "grade": "lost",
+        "theoretical_return_cad": 0,
+        "net_profit_cad": -2,
+        "legs": [
+          {
+            "selection": "San Francisco 49ers ML",
+            "status": "lost",
+            "final": "SF 20–29 ATL"
+          },
+          {
+            "selection": "Minnesota Vikings ML",
+            "status": "won",
+            "final": "MIN 16–10 IND"
+          },
+          {
+            "selection": "Carolina Panthers ML",
+            "status": "lost",
+            "final": "CAR 13–43 TB"
+          }
+        ],
+        "basis": "Game outcomes verified from immutable NFL Week 7 grading; active revised version 2 alone counted. Original SF/KC version remains superseded. This is hypothetical, not a PlayNow operator settlement.",
+        "sources": [
+          "https://github.com/dwfriesen-cyber/Sports-Picks-/blob/picks-data/grading/nfl/2026_07_SF_ATL/483e793176dbbec8552ed3da1709bf3a35511f171b59539af993a5ee1a5660b5.json",
+          "https://github.com/dwfriesen-cyber/Sports-Picks-/blob/picks-data/grading/nfl/2026_07_IND_MIN/f0c479192284438dfbd152e913cd0c237c95699624b6cb85df24e8480d4d26e1.json",
+          "https://github.com/dwfriesen-cyber/Sports-Picks-/blob/picks-data/grading/nfl/2026_07_TB_CAR/7ad62d7e978ac8f994e517e5487ad14a878bd4dd493d7041db5162b25760f42c.json"
+        ]
+      }
     }
   ],
   "summary": {
-    "settled_count": 1,
+    "settled_count": 2,
     "settled_wins": 0,
-    "settled_losses": 1,
-    "settled_stakes_cad": 2,
+    "settled_losses": 2,
+    "settled_stakes_cad": 4,
     "settled_returns_cad": 0,
-    "net_cad": -2,
-    "pending_count": 1,
-    "pending_stakes_cad": 2,
+    "net_cad": -4,
+    "pending_count": 0,
+    "pending_stakes_cad": 0,
     "starting_hypothetical_bankroll_cad": null,
-    "bankroll_note": "No owner-approved starting hypothetical bankroll has been recorded; do not infer one."
+    "bankroll_note": "No owner-approved starting hypothetical bankroll has been recorded; do not infer one.",
+    "unreconciled_report_published_versions_note": "Additional October 24–November 3 report-published hypothetical proposals and revisions are documented in reports/usage-gap-reconciliation-2026-11-04.md. They are not silently treated as one official active ticket per date until original publication and version evidence is reconciled."
   }
 }
