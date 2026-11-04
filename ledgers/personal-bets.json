@@ -236,7 +236,7 @@
       "status": "pending",
       "matched_assistant_ticket": false,
       "source": "Owner-provided Oct 24 PlayNow ticket details; 3:21 PM local, per canonical template",
-      "settlement_note": "Await verified final outcomes and sportsbook settlement; do not infer payout from results alone.",
+      "settlement_note": "All three legs have known on-field results; KC +2.5 lost. Actual PlayNow operator settlement still unverified; preserve original pending status and odds.",
       "leg_results": [
         {
           "pick": "Pittsburgh Penguins ML",
@@ -252,11 +252,15 @@
         },
         {
           "pick": "Kansas City Chiefs +2.5 spread",
-          "status": "pending",
-          "scheduled_date": "2026-10-25"
+          "status": "lost",
+          "final": "KC 3–20 SEA",
+          "date": "2026-10-25",
+          "source": "https://github.com/dwfriesen-cyber/Sports-Picks-/blob/picks-data/grading/nfl/2026_07_KC_SEA/4f48fe89720322f117f97d2f58d60a5432cbbd95ae075c0ef9cb8419fada2185.json"
         }
       ],
-      "outcome_checked_on": "2026-10-25"
+      "outcome_checked_on": "2026-10-25",
+      "on_field_grade": "lost",
+      "on_field_grade_verified_on": "2026-11-04"
     },
     {
       "date": "2026-10-25",
@@ -301,9 +305,30 @@
           "final": "PIT 16–10 NO",
           "date": "2026-10-25",
           "verified_source": "https://www.nfl.com/news/2026-nfl-season-week-7-what-we-learned-from-sunday-s-games"
+        },
+        {
+          "pick": "Baltimore Ravens ML",
+          "status": "lost",
+          "final": "CIN 35–13 BAL",
+          "date": "2026-10-25"
+        },
+        {
+          "pick": "Carolina Panthers ML",
+          "status": "lost",
+          "final": "TB 43–13 CAR",
+          "date": "2026-10-25"
+        },
+        {
+          "pick": "San Francisco 49ers ML",
+          "status": "lost",
+          "final": "ATL 29–20 SF",
+          "date": "2026-10-25"
         }
       ],
-      "outcome_checked_on": "2026-10-25"
+      "outcome_checked_on": "2026-10-25",
+      "on_field_grade": "lost",
+      "on_field_grade_verified_on": "2026-11-04",
+      "settlement_note": "Multiple losing legs independently established by immutable NFL grading; PlayNow operator settlement not confirmed."
     },
     {
       "date": "2026-10-25",
@@ -335,7 +360,59 @@
       "cashout_snapshot": 1.8,
       "matched_assistant_ticket": false,
       "verification_needed": null,
-      "time_local": "07:35"
+      "time_local": "07:35",
+      "on_field_grade": "lost",
+      "on_field_grade_verified_on": "2026-11-04",
+      "leg_results": [
+        {
+          "pick": "San Francisco 49ers ML",
+          "status": "lost",
+          "final": "ATL 29–20 SF",
+          "date": "2026-10-25"
+        }
+      ],
+      "settlement_note": "San Francisco ML lost, eliminating parlay; other legs need not be inferred. PlayNow operator settlement not confirmed."
+    },
+    {
+      "date": "2026-10-29",
+      "time_local": "16:14",
+      "description": "Three-leg NHL moneyline parlay: Carolina Hurricanes / Minnesota Wild / Washington Capitals",
+      "legs": [
+        {
+          "pick": "Carolina Hurricanes ML",
+          "odds": 1.39,
+          "opponent": "Columbus Blue Jackets",
+          "on_field_status": "won",
+          "final": "CAR 3–2 CBJ"
+        },
+        {
+          "pick": "Minnesota Wild ML",
+          "odds": 1.51,
+          "opponent": "New York Islanders",
+          "on_field_status": "lost",
+          "final": "NYI 4–3 MIN (OT)"
+        },
+        {
+          "pick": "Washington Capitals ML",
+          "odds": 1.9,
+          "opponent": "Nashville Predators",
+          "on_field_status": "won",
+          "final": "WSH 4–3 NSH"
+        }
+      ],
+      "stake": 2,
+      "odds": 4.02,
+      "potential_return": 8.04,
+      "potential_profit": 6.04,
+      "status": "pending",
+      "on_field_grade": "lost",
+      "on_field_grade_verified_on": "2026-11-04",
+      "matched_assistant_ticket": true,
+      "matched_assistant_ticket_note": "Matches later Oct 29 report-published hypothetical proposal; do not treat as additional assistant hypothetical stake or assume it was formally active in the assistant ledger.",
+      "source": "Owner-provided PlayNow screenshot October 29, 2026; ticket placed 4:14 PM Saskatchewan; viewed at 5:28 PM Saskatchewan.",
+      "cashout_snapshot": 1.56,
+      "balance_snapshot": 12.77,
+      "settlement_note": "Minnesota ML lost in overtime; parlay is mathematically lost. Exact PlayNow operator settlement and any subsequent transactions remain unverified."
     }
   ],
   "summary": {
@@ -345,10 +422,14 @@
     "settled_stakes": 68,
     "settled_returns": 39.769999999999996,
     "settled_net": -28.23,
-    "pending_count": 3,
-    "pending_stakes": 7,
-    "available_balance": 14.77,
-    "starting_balance": 50
+    "pending_count": 4,
+    "pending_stakes": 9,
+    "available_balance": 12.77,
+    "starting_balance": 50,
+    "available_balance_as_of": "2026-10-29 17:28 America/Regina",
+    "on_field_lost_operator_unverified_count": 4,
+    "on_field_lost_operator_unverified_stakes": 9,
+    "settlement_note": "Saved settled totals 2–11 and -$28.23 unchanged until PlayNow operator settlement evidence. All four pending tickets are mathematically lost based on game results; not represented as operator settled."
   },
   "notes": [
     "已结算返还金额包含原始本金。",
@@ -361,7 +442,8 @@
     "2026-10-25 independent score verification: Oct 23 NC State ML loss was graded mathematically, while actual operator settlement remains unconfirmed; Oct 24 PIT/MIN legs won and KC +2.5 remains unplayed. Previously recorded balance is a historical screenshot, not live.",
     "2026-10-25 07:35 Saskatchewan screenshot shows three pending wagers and displayed $23.77 balance; cashout values are volatile snapshots, not settled returns. Four-leg $2 ticket fourth leg is obscured.",
     "2026-10-25 07:39 owner expanded screenshot identifies four-leg 5.58 ticket's full moneyline legs, including Minnesota 1.54; displayed account balance $21.77. Balance snapshot differs from earlier $23.77 and is not inferred from stakes.",
-    "Oct 26 at 12:35 PM Saskatchewan: PlayNow screenshot reports $14.77 displayed balance and a new $7 three-leg moneyline ticket at 4.29 with $30.08 potential return. Previous Oct 24–25 tickets still show pending in this ledger despite decisive losses; do not treat their status as operator-confirmed or report the old saved pending count as actual current PlayNow status."
+    "Oct 26 at 12:35 PM Saskatchewan: PlayNow screenshot reports $14.77 displayed balance and a new $7 three-leg moneyline ticket at 4.29 with $30.08 potential return. Previous Oct 24–25 tickets still show pending in this ledger despite decisive losses; do not treat their status as operator-confirmed or report the old saved pending count as actual current PlayNow status.",
+    "Nov 4 reconciliation: Oct 24 and Oct 25 pending tickets all have decisive losing legs; Oct 29 owner screenshot adds separate $2 Carolina/Minnesota/Washington ticket (on-field loss), with $12.77 balance at 5:28 PM Oct 29. Keep all four pending for operator settlement verification; do not infer live balance or deposit/withdrawal activity."
   ],
   "language": "zh-CN",
   "display_language": "简体中文",
