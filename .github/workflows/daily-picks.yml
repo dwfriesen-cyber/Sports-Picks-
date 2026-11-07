@@ -1,10 +1,12 @@
 name: Daily frozen sports predictions
 on:
   schedule:
-    # Saskatchewan UTC-6 year-round. Earlier 05:37/05:53 probes and 06:09/06:29/06:47 recovery.
-    # Cron is best-effort. Extra staggered attempts mitigate missed/late starts; immutable freeze remains authoritative.
-    - cron: '37,53 11 * * *'
-    - cron: '9,29,47 12 * * *'
+    # Saskatchewan UTC-6 year-round. Five spaced attempts: 03:17, 04:17, 05:17, 06:17, 06:47 local.
+    # Same five-run daily cap; earlier attempts give best-effort GitHub scheduler more runway.
+    # Never trust early incomplete data: pipeline's prior-game final and true 5v5 xG checks still apply.
+    # GitHub cron is NOT guaranteed; a separate externally triggered fallback may still be needed.
+    - cron: '17 9,10,11,12 * * *'
+    - cron: '47 12 * * *'
   workflow_dispatch:
     # 2026-10-24 recovery trigger: scheduled window missed; model/input SHA and freeze guards unchanged.
   push:
@@ -17,6 +19,7 @@ concurrency:
   cancel-in-progress: false
 env:
   SPORTS_SOURCE_SHA: 073a17d3849db83f684a8273dec77993742eec5d
+  SCHEDULED_CRON: ${{ github.event.schedule }}
 jobs:
   daily:
     runs-on: ubuntu-latest
@@ -65,7 +68,7 @@ jobs:
           day=datetime.datetime.now(ZoneInfo('America/Regina')).date().isoformat()
           status=d.get('nhl',{}).get('status')
           frozen=d.get('nhl',{}).get('slate',{}).get('frozen_at')
-          print(f'DAILY_NHL_CHECK expected={day} reported={d.get("report_date")} status={status} frozen_at={frozen} run_id={os.getenv("GITHUB_RUN_ID")}')
+          print(f'DAILY_NHL_CHECK expected={day} reported={d.get("report_date")} status={status} frozen_at={frozen} run_id={os.getenv("GITHUB_RUN_ID")} event={os.getenv("GITHUB_EVENT_NAME")} cron={os.getenv("SCHEDULED_CRON")}')
           if d.get('report_date')!=day or status not in ('frozen','no_games'):
             raise SystemExit('NHL_FREEZE_UNAVAILABLE: inspect earlier pipeline download/errors; no stale picks permitted')
           PY
