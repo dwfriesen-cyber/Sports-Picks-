@@ -1,147 +1,14 @@
 {
   "schema_version": 1,
-  "generated_at": "2026-11-11T19:53:02.050946+00:00",
-  "report_date": "2026-11-11",
+  "generated_at": "2026-11-12T17:33:42.538911+00:00",
+  "report_date": "2026-11-12",
   "timezone": "America/Regina",
-  "valid_until": "2026-11-12T06:00:00-06:00",
+  "valid_until": "2026-11-13T06:00:00-06:00",
   "code_sha": "073a17d3849db83f684a8273dec77993742eec5d",
   "status": "partial",
   "nhl": {
-    "status": "frozen",
-    "quality": {
-      "season": 2026,
-      "completed_games": 292,
-      "missing_xg_games": []
-    },
-    "slate": {
-      "code_sha": "073a17d3849db83f684a8273dec77993742eec5d",
-      "frozen_at": "2026-11-11T17:05:16.182317+00:00",
-      "input_sha256": "f7f42bf8577fe1e04dbe253e88a624fc9dc85e219866670d26517714c4785d48",
-      "kind": "nhl_v6_v7a",
-      "picks": [
-        {
-          "away": "TBL",
-          "away_name": "Tampa Bay Lightning",
-          "confidence": 0.3730633938366502,
-          "confidence_margin": -0.3730633938366502,
-          "confidence_status": "V7-A xG ranking",
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020293",
-          "home": "BUF",
-          "home_name": "Buffalo Sabres",
-          "margin": -0.2966588915675147,
-          "model_version": "nhl-v6-v7a-original-20261016",
-          "prior_games": 17,
-          "rank": 3,
-          "start_time": "2026-11-12T00:00:00Z",
-          "top25": false,
-          "v1_margin": -0.45747878821819654,
-          "winner": "TBL"
-        },
-        {
-          "away": "NYR",
-          "away_name": "New York Rangers",
-          "confidence": 0.5347137744644499,
-          "confidence_margin": -0.5347137744644499,
-          "confidence_status": "V7-A xG ranking",
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020294",
-          "home": "CGY",
-          "home_name": "Calgary Flames",
-          "margin": -0.44881932392319335,
-          "model_version": "nhl-v6-v7a-original-20261016",
-          "prior_games": 18,
-          "rank": 1,
-          "start_time": "2026-11-12T00:30:00Z",
-          "top25": true,
-          "v1_margin": -0.4831895254632812,
-          "winner": "NYR"
-        },
-        {
-          "away": "PHI",
-          "away_name": "Philadelphia Flyers",
-          "confidence": 0.5241044537839336,
-          "confidence_margin": 0.5241044537839336,
-          "confidence_status": "V7-A xG ranking",
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020295",
-          "home": "EDM",
-          "home_name": "Edmonton Oilers",
-          "margin": 0.478114756735586,
-          "model_version": "nhl-v6-v7a-original-20261016",
-          "prior_games": 19,
-          "rank": 2,
-          "start_time": "2026-11-12T02:00:00Z",
-          "top25": true,
-          "v1_margin": 1.1949357771679336,
-          "winner": "EDM"
-        },
-        {
-          "away": "UTA",
-          "away_name": "Utah Mammoth",
-          "confidence": 0.07233739073278805,
-          "confidence_margin": -0.07233739073278805,
-          "confidence_status": "V7-A xG ranking",
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020296",
-          "home": "VGK",
-          "home_name": "Vegas Golden Knights",
-          "margin": 0.17335709862697263,
-          "model_version": "nhl-v6-v7a-original-20261016",
-          "prior_games": 18,
-          "rank": 6,
-          "start_time": "2026-11-12T02:30:00Z",
-          "top25": false,
-          "v1_margin": 0.40524700975479,
-          "winner": "VGK"
-        },
-        {
-          "away": "NSH",
-          "away_name": "Nashville Predators",
-          "confidence": 0.2937853015542792,
-          "confidence_margin": -0.2937853015542792,
-          "confidence_status": "V7-A xG ranking",
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020297",
-          "home": "ANA",
-          "home_name": "Anaheim Ducks",
-          "margin": -0.1008379937534162,
-          "model_version": "nhl-v6-v7a-original-20261016",
-          "prior_games": 18,
-          "rank": 5,
-          "start_time": "2026-11-12T03:00:00Z",
-          "top25": false,
-          "v1_margin": 0.09706857055277496,
-          "winner": "NSH"
-        },
-        {
-          "away": "PIT",
-          "away_name": "Pittsburgh Penguins",
-          "confidence": 0.32979107604383123,
-          "confidence_margin": -0.32979107604383123,
-          "confidence_status": "V7-A xG ranking",
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020298",
-          "home": "SJS",
-          "home_name": "San Jose Sharks",
-          "margin": -0.16228571149166632,
-          "model_version": "nhl-v6-v7a-original-20261016",
-          "prior_games": 18,
-          "rank": 4,
-          "start_time": "2026-11-12T03:00:00Z",
-          "top25": false,
-          "v1_margin": -0.2990544272315745,
-          "winner": "PIT"
-        }
-      ],
-      "schema_version": 1
-    }
+    "status": "blocked",
+    "reason": "Late run: earliest game has started; slate not frozen"
   },
   "nfl": {
     "v1_status": "frozen",
@@ -349,112 +216,8 @@
     "weekly_confidence_rankings": null
   },
   "v8": {
-    "status": "frozen",
-    "slate": {
-      "code_sha": "073a17d3849db83f684a8273dec77993742eec5d",
-      "frozen_at": "2026-11-11T17:05:18.268481+00:00",
-      "input_sha256": "aa41fef8b14d51b233d5ecd90cb11f52eeebf6db7082dde67c7ab14b281ff140",
-      "kind": "nhl_v8_lite",
-      "picks": [
-        {
-          "away": "TBL",
-          "confidence": 0.8256179927174125,
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020293",
-          "home": "BUF",
-          "margin": -0.8256179927174125,
-          "model_version": "v8-lite-frozen-20261018",
-          "rank": 3,
-          "start_time": "2026-11-12T00:00:00Z",
-          "top25": false,
-          "winner": "TBL",
-          "xg_data_through": "2026-11-10",
-          "xg_source": "IceScope xgBalance60 window=5"
-        },
-        {
-          "away": "NYR",
-          "confidence": 0.9942996505624464,
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020294",
-          "home": "CGY",
-          "margin": -0.9942996505624464,
-          "model_version": "v8-lite-frozen-20261018",
-          "rank": 2,
-          "start_time": "2026-11-12T00:30:00Z",
-          "top25": true,
-          "winner": "NYR",
-          "xg_data_through": "2026-11-10",
-          "xg_source": "IceScope xgBalance60 window=5"
-        },
-        {
-          "away": "PHI",
-          "confidence": 1.2431181416487311,
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020295",
-          "home": "EDM",
-          "margin": 1.2431181416487311,
-          "model_version": "v8-lite-frozen-20261018",
-          "rank": 1,
-          "start_time": "2026-11-12T02:00:00Z",
-          "top25": true,
-          "winner": "EDM",
-          "xg_data_through": "2026-11-10",
-          "xg_source": "IceScope xgBalance60 window=5"
-        },
-        {
-          "away": "UTA",
-          "confidence": 0.05423737930992484,
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020296",
-          "home": "VGK",
-          "margin": -0.05423737930992484,
-          "model_version": "v8-lite-frozen-20261018",
-          "rank": 5,
-          "start_time": "2026-11-12T02:30:00Z",
-          "top25": false,
-          "winner": "UTA",
-          "xg_data_through": "2026-11-10",
-          "xg_source": "IceScope xgBalance60 window=5"
-        },
-        {
-          "away": "NSH",
-          "confidence": 0.012786995283468633,
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020297",
-          "home": "ANA",
-          "margin": 0.012786995283468633,
-          "model_version": "v8-lite-frozen-20261018",
-          "rank": 6,
-          "start_time": "2026-11-12T03:00:00Z",
-          "top25": false,
-          "winner": "ANA",
-          "xg_data_through": "2026-11-10",
-          "xg_source": "IceScope xgBalance60 window=5"
-        },
-        {
-          "away": "PIT",
-          "confidence": 0.5853398975781867,
-          "date": "2026-11-11",
-          "eligible": true,
-          "game_id": "2026020298",
-          "home": "SJS",
-          "margin": -0.5853398975781867,
-          "model_version": "v8-lite-frozen-20261018",
-          "rank": 4,
-          "start_time": "2026-11-12T03:00:00Z",
-          "top25": false,
-          "winner": "PIT",
-          "xg_data_through": "2026-11-10",
-          "xg_source": "IceScope xgBalance60 window=5"
-        }
-      ],
-      "schema_version": 1
-    }
+    "status": "blocked",
+    "reason": "Late run: earliest game has started; slate not frozen"
   },
   "historical": {
     "rows": [
@@ -3730,6 +3493,90 @@
       "winner": "NSH"
     },
     {
+      "game_id": "2026020293",
+      "date": "2026-11-11",
+      "forecast_sha256": "ac95e81dc7cd399f67e7217f718adefe0a2e51d872ca71d11cd2835ca1c34820",
+      "model": "nhl_v6_v7a",
+      "winner": "TBL",
+      "actual_winner": "TBL",
+      "home_score": 3,
+      "away_score": 8,
+      "correct": true,
+      "rank": 3,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020294",
+      "date": "2026-11-11",
+      "forecast_sha256": "ac95e81dc7cd399f67e7217f718adefe0a2e51d872ca71d11cd2835ca1c34820",
+      "model": "nhl_v6_v7a",
+      "winner": "NYR",
+      "actual_winner": "NYR",
+      "home_score": 1,
+      "away_score": 3,
+      "correct": true,
+      "rank": 1,
+      "top25": true,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020295",
+      "date": "2026-11-11",
+      "forecast_sha256": "ac95e81dc7cd399f67e7217f718adefe0a2e51d872ca71d11cd2835ca1c34820",
+      "model": "nhl_v6_v7a",
+      "winner": "EDM",
+      "actual_winner": "EDM",
+      "home_score": 3,
+      "away_score": 2,
+      "correct": true,
+      "rank": 2,
+      "top25": true,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020296",
+      "date": "2026-11-11",
+      "forecast_sha256": "ac95e81dc7cd399f67e7217f718adefe0a2e51d872ca71d11cd2835ca1c34820",
+      "model": "nhl_v6_v7a",
+      "winner": "VGK",
+      "actual_winner": "VGK",
+      "home_score": 5,
+      "away_score": 3,
+      "correct": true,
+      "rank": 6,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020297",
+      "date": "2026-11-11",
+      "forecast_sha256": "ac95e81dc7cd399f67e7217f718adefe0a2e51d872ca71d11cd2835ca1c34820",
+      "model": "nhl_v6_v7a",
+      "winner": "NSH",
+      "actual_winner": "NSH",
+      "home_score": 2,
+      "away_score": 4,
+      "correct": true,
+      "rank": 5,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020298",
+      "date": "2026-11-11",
+      "forecast_sha256": "ac95e81dc7cd399f67e7217f718adefe0a2e51d872ca71d11cd2835ca1c34820",
+      "model": "nhl_v6_v7a",
+      "winner": "PIT",
+      "actual_winner": "PIT",
+      "home_score": 2,
+      "away_score": 3,
+      "correct": true,
+      "rank": 4,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
       "actual_winner": "ANA",
       "away_score": 5,
       "correct": true,
@@ -5478,6 +5325,90 @@
       "rank": 6,
       "top25": false,
       "winner": "LAK"
+    },
+    {
+      "game_id": "2026020293",
+      "date": "2026-11-11",
+      "forecast_sha256": "311cac8f96d4bfd76c39aa558b4607228336b0e796f4dcc887c3205b5df354a3",
+      "model": "nhl_v8_lite",
+      "winner": "TBL",
+      "actual_winner": "TBL",
+      "home_score": 3,
+      "away_score": 8,
+      "correct": true,
+      "rank": 3,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020294",
+      "date": "2026-11-11",
+      "forecast_sha256": "311cac8f96d4bfd76c39aa558b4607228336b0e796f4dcc887c3205b5df354a3",
+      "model": "nhl_v8_lite",
+      "winner": "NYR",
+      "actual_winner": "NYR",
+      "home_score": 1,
+      "away_score": 3,
+      "correct": true,
+      "rank": 2,
+      "top25": true,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020295",
+      "date": "2026-11-11",
+      "forecast_sha256": "311cac8f96d4bfd76c39aa558b4607228336b0e796f4dcc887c3205b5df354a3",
+      "model": "nhl_v8_lite",
+      "winner": "EDM",
+      "actual_winner": "EDM",
+      "home_score": 3,
+      "away_score": 2,
+      "correct": true,
+      "rank": 1,
+      "top25": true,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020296",
+      "date": "2026-11-11",
+      "forecast_sha256": "311cac8f96d4bfd76c39aa558b4607228336b0e796f4dcc887c3205b5df354a3",
+      "model": "nhl_v8_lite",
+      "winner": "UTA",
+      "actual_winner": "VGK",
+      "home_score": 5,
+      "away_score": 3,
+      "correct": false,
+      "rank": 5,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020297",
+      "date": "2026-11-11",
+      "forecast_sha256": "311cac8f96d4bfd76c39aa558b4607228336b0e796f4dcc887c3205b5df354a3",
+      "model": "nhl_v8_lite",
+      "winner": "ANA",
+      "actual_winner": "NSH",
+      "home_score": 2,
+      "away_score": 4,
+      "correct": false,
+      "rank": 6,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
+    },
+    {
+      "game_id": "2026020298",
+      "date": "2026-11-11",
+      "forecast_sha256": "311cac8f96d4bfd76c39aa558b4607228336b0e796f4dcc887c3205b5df354a3",
+      "model": "nhl_v8_lite",
+      "winner": "PIT",
+      "actual_winner": "PIT",
+      "home_score": 2,
+      "away_score": 3,
+      "correct": true,
+      "rank": 4,
+      "top25": false,
+      "graded_at": "2026-11-12T17:33:49.300605+00:00"
     }
   ],
   "prospective_summary": {
@@ -5778,6 +5709,15 @@
           "top25_wins": 1,
           "top25_games": 2,
           "top25_accuracy": 0.5
+        },
+        "2026-11-11": {
+          "wins": 6,
+          "losses": 0,
+          "games": 6,
+          "accuracy": 1.0,
+          "top25_wins": 2,
+          "top25_games": 2,
+          "top25_accuracy": 1.0
         }
       },
       "weekly": {
@@ -5809,24 +5749,24 @@
           "top25_accuracy": 0.7857142857142857
         },
         "2026-W46": {
-          "wins": 7,
+          "wins": 13,
           "losses": 3,
-          "games": 10,
-          "accuracy": 0.7,
-          "top25_wins": 1,
-          "top25_games": 3,
-          "top25_accuracy": 0.3333333333333333
+          "games": 16,
+          "accuracy": 0.8125,
+          "top25_wins": 3,
+          "top25_games": 5,
+          "top25_accuracy": 0.6
         }
       },
       "season_to_date_available_ledger": {
         "2026-27": {
-          "wins": 82,
+          "wins": 88,
           "losses": 45,
-          "games": 127,
-          "accuracy": 0.6456692913385826,
-          "top25_wins": 26,
-          "top25_games": 37,
-          "top25_accuracy": 0.7027027027027027
+          "games": 133,
+          "accuracy": 0.6616541353383458,
+          "top25_wins": 28,
+          "top25_games": 39,
+          "top25_accuracy": 0.717948717948718
         }
       }
     },
@@ -5993,6 +5933,15 @@
           "top25_wins": 1,
           "top25_games": 2,
           "top25_accuracy": 0.5
+        },
+        "2026-11-11": {
+          "wins": 4,
+          "losses": 2,
+          "games": 6,
+          "accuracy": 0.6666666666666666,
+          "top25_wins": 2,
+          "top25_games": 2,
+          "top25_accuracy": 1.0
         }
       },
       "weekly": {
@@ -6024,24 +5973,24 @@
           "top25_accuracy": 0.7857142857142857
         },
         "2026-W46": {
-          "wins": 6,
-          "losses": 4,
-          "games": 10,
-          "accuracy": 0.6,
-          "top25_wins": 1,
-          "top25_games": 3,
-          "top25_accuracy": 0.3333333333333333
+          "wins": 10,
+          "losses": 6,
+          "games": 16,
+          "accuracy": 0.625,
+          "top25_wins": 3,
+          "top25_games": 5,
+          "top25_accuracy": 0.6
         }
       },
       "season_to_date_available_ledger": {
         "2026-27": {
-          "wins": 83,
-          "losses": 42,
-          "games": 125,
-          "accuracy": 0.664,
-          "top25_wins": 25,
-          "top25_games": 36,
-          "top25_accuracy": 0.6944444444444444
+          "wins": 87,
+          "losses": 44,
+          "games": 131,
+          "accuracy": 0.6641221374045801,
+          "top25_wins": 27,
+          "top25_games": 38,
+          "top25_accuracy": 0.7105263157894737
         }
       }
     }
@@ -6268,13 +6217,13 @@
           "top25_accuracy": 0.5
         },
         "2026-11-11": {
-          "wins": 0,
-          "losses": 0,
-          "games": 0,
-          "accuracy": null,
-          "top25_wins": 0,
-          "top25_games": 0,
-          "top25_accuracy": null
+          "wins": 4,
+          "losses": 2,
+          "games": 6,
+          "accuracy": 0.6666666666666666,
+          "top25_wins": 2,
+          "top25_games": 2,
+          "top25_accuracy": 1.0
         }
       },
       "weekly": {
@@ -6315,30 +6264,30 @@
           "top25_accuracy": 0.7857142857142857
         },
         "2026-W46": {
-          "wins": 6,
-          "losses": 4,
-          "games": 10,
-          "accuracy": 0.6,
-          "top25_wins": 1,
-          "top25_games": 3,
-          "top25_accuracy": 0.3333333333333333
+          "wins": 10,
+          "losses": 6,
+          "games": 16,
+          "accuracy": 0.625,
+          "top25_wins": 3,
+          "top25_games": 5,
+          "top25_accuracy": 0.6
         }
       },
       "season_to_date_available_ledger": {
         "2026-27": {
-          "wins": 96,
-          "losses": 62,
-          "games": 158,
-          "accuracy": 0.6075949367088608,
-          "top25_wins": 29,
-          "top25_games": 46,
-          "top25_accuracy": 0.6304347826086957
+          "wins": 100,
+          "losses": 64,
+          "games": 164,
+          "accuracy": 0.6097560975609756,
+          "top25_wins": 31,
+          "top25_games": 48,
+          "top25_accuracy": 0.6458333333333334
         }
       }
     },
     "same_game_disagreements": {
-      "graded": 15,
-      "v6_correct": 8,
+      "graded": 17,
+      "v6_correct": 10,
       "v8_correct": 7,
       "rows": [
         {
@@ -6519,6 +6468,24 @@
           "actual_winner": "NSH",
           "v6_winner": "NSH",
           "comparison_basis": "prospective frozen V6"
+        },
+        {
+          "game_id": "2026020296",
+          "date": "2026-11-11",
+          "v8_lite_winner": "UTA",
+          "v8_lite_rank": 5,
+          "actual_winner": "VGK",
+          "v6_winner": "VGK",
+          "comparison_basis": "prospective frozen V6"
+        },
+        {
+          "game_id": "2026020297",
+          "date": "2026-11-11",
+          "v8_lite_winner": "ANA",
+          "v8_lite_rank": 6,
+          "actual_winner": "NSH",
+          "v6_winner": "NSH",
+          "comparison_basis": "prospective frozen V6"
         }
       ]
     }
@@ -6526,459 +6493,465 @@
   "source_receipts": [
     {
       "url": "https://icescope.app/",
-      "fetched_at": "2026-11-11T19:53:12.683535+00:00",
-      "sha256": "fb2595fe4f89f4467228b7641c1876ecd6f6602847202eb543693c10453eac83",
-      "bytes": 92905
+      "fetched_at": "2026-11-12T17:33:47.892442+00:00",
+      "sha256": "bb4493d2406088d7c05e9c4634ac7bc238403715560152d509988a2797c87ffa",
+      "bytes": 93164
     },
     {
       "url": "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_2026.csv.gz",
-      "fetched_at": "2026-11-11T19:53:13.023960+00:00",
-      "sha256": "1aa9d0dadf7152ee17b8df94b0d8e5c944d43c4cf217518acd60311455cbe818",
-      "bytes": 9346348
+      "fetched_at": "2026-11-12T17:33:48.249809+00:00",
+      "sha256": "c8dbd1e5e1398e0fc3ced288c2000e9d0ef75ec7cdb1618d9e967d1fe15fc845",
+      "bytes": 9346355
     },
     {
       "url": "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv",
-      "fetched_at": "2026-11-11T19:53:12.742484+00:00",
-      "sha256": "216849fc5aa0ffd8a1aeb842a442f0fdb7288642b62e236b469af4373fcc8db5",
-      "bytes": 2189966
+      "fetched_at": "2026-11-12T17:33:47.992677+00:00",
+      "sha256": "306d1bed03c1a7ffb995ba820c7d17dad5578973c79c9fb67ecc201ebe47e16a",
+      "bytes": 2189964
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-01",
-      "fetched_at": "2026-11-11T19:53:02.222444+00:00",
+      "fetched_at": "2026-11-12T17:33:42.831466+00:00",
       "sha256": "b71476e614091d16d1ffdb488c528dc3306e6b23b2e7d91f8658c3972cfad255",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-02",
-      "fetched_at": "2026-11-11T19:53:02.220956+00:00",
+      "fetched_at": "2026-11-12T17:33:42.847006+00:00",
       "sha256": "56e7adc81893c22edc6ab16a9493891554ca1c6b742a0df886edeebeea6a1494",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-03",
-      "fetched_at": "2026-11-11T19:53:02.226544+00:00",
+      "fetched_at": "2026-11-12T17:33:42.800454+00:00",
       "sha256": "4abb4e47726fb62f11bb97163594da23b847382265a9dbcfbca4482b61700be6",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-04",
-      "fetched_at": "2026-11-11T19:53:02.230474+00:00",
+      "fetched_at": "2026-11-12T17:33:42.808180+00:00",
       "sha256": "4343837e0db1210a0eaf329d6a0935df3d063ddaa98c954cccfc1b8889761551",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-05",
-      "fetched_at": "2026-11-11T19:53:02.258968+00:00",
+      "fetched_at": "2026-11-12T17:33:42.799534+00:00",
       "sha256": "d52afe5466d8a7298efe5cf1f777590868912ad89afb75ffa58f50a6e9b487e0",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-06",
-      "fetched_at": "2026-11-11T19:53:02.227464+00:00",
+      "fetched_at": "2026-11-12T17:33:42.818334+00:00",
       "sha256": "9d69dbb04720b11c7947fa9e2f917c6b78efb2314655c2c9b0ac744bf84295dd",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-07",
-      "fetched_at": "2026-11-11T19:53:02.354065+00:00",
+      "fetched_at": "2026-11-12T17:33:42.958680+00:00",
       "sha256": "e053cc37a089635a389db18decf6bb2926dfe856919d77a664ec2faba02f26ca",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-08",
-      "fetched_at": "2026-11-11T19:53:02.331516+00:00",
+      "fetched_at": "2026-11-12T17:33:42.971272+00:00",
       "sha256": "b81e6e1a361f11d7870c03975e1ee4c9ea782cd81557a63fe341afa0423e0fa6",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-09",
-      "fetched_at": "2026-11-11T19:53:02.331000+00:00",
+      "fetched_at": "2026-11-12T17:33:42.974146+00:00",
       "sha256": "5bb4ca9a2318c0f4b428b6dbdee1885ac02a46fe01597f68cb7b5cf77006305a",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-10",
-      "fetched_at": "2026-11-11T19:53:02.354192+00:00",
+      "fetched_at": "2026-11-12T17:33:42.971438+00:00",
       "sha256": "c2404279a8c4819143e9dc789e731bffa6e6dccee24e390bacfc4ea0991cbe78",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-11",
-      "fetched_at": "2026-11-11T19:53:02.336376+00:00",
+      "fetched_at": "2026-11-12T17:33:43.039330+00:00",
       "sha256": "17465415d7b69fd0eecf00c1007c99071cf3b5594b02e8e40a231f0428ea933a",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-12",
-      "fetched_at": "2026-11-11T19:53:02.362705+00:00",
+      "fetched_at": "2026-11-12T17:33:43.032175+00:00",
       "sha256": "8a8bf04109c2175d7bc891956c0c57123fbb86358e9d06f2987c9088e6771be9",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-13",
-      "fetched_at": "2026-11-11T19:53:02.471633+00:00",
+      "fetched_at": "2026-11-12T17:33:43.136763+00:00",
       "sha256": "2cfae600309770ef263c8361d4bce10f4e8f4cd01d2012d632e8bad83289ae1b",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-14",
-      "fetched_at": "2026-11-11T19:53:02.448362+00:00",
+      "fetched_at": "2026-11-12T17:33:43.133592+00:00",
       "sha256": "cec5b8e0fd5e801444010ab831302f92c4ecc35678a949b7f862dacbc5102243",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-15",
-      "fetched_at": "2026-11-11T19:53:02.446563+00:00",
+      "fetched_at": "2026-11-12T17:33:43.224083+00:00",
       "sha256": "1dc9bc0c11e1a45a1b59e9e960785e390d2ee9d8e88a83e6ec779288c7119471",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-16",
-      "fetched_at": "2026-11-11T19:53:02.463740+00:00",
+      "fetched_at": "2026-11-12T17:33:43.137836+00:00",
       "sha256": "ff0ca56fec8b6258a42fcee8f30454c2d6d62f01427b7ec8c45a29aa6572a6a5",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-17",
-      "fetched_at": "2026-11-11T19:53:02.452025+00:00",
+      "fetched_at": "2026-11-12T17:33:43.188171+00:00",
       "sha256": "0ca9b8442d8d1a92877a030e418a8e33517d75d5c2d15a78ab5acfd5498b2d61",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-18",
-      "fetched_at": "2026-11-11T19:53:02.474654+00:00",
+      "fetched_at": "2026-11-12T17:33:43.261613+00:00",
       "sha256": "cf82b1579a173af6b24fb73a53f1992fe0bd2ea86effba8eb9c46a1f79db98a4",
       "bytes": 2498
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-19",
-      "fetched_at": "2026-11-11T19:53:02.582899+00:00",
+      "fetched_at": "2026-11-12T17:33:43.381334+00:00",
       "sha256": "e51f4ab8de30b5b0770674d79c296d8848427293ec21fc6a238523d159b22cfb",
       "bytes": 44449
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-20",
-      "fetched_at": "2026-11-11T19:53:02.667128+00:00",
+      "fetched_at": "2026-11-12T17:33:43.402218+00:00",
       "sha256": "7e269f9cad335404b3b321fe7a1321a5b110b60a1d1768391980d8596a8f0db9",
       "bytes": 42657
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-21",
-      "fetched_at": "2026-11-11T19:53:02.665423+00:00",
+      "fetched_at": "2026-11-12T17:33:43.391163+00:00",
       "sha256": "01db0173c02588c8cadf6bb569ab4a5c7ffafef9461ab3aaa2865030e6b17a7a",
       "bytes": 42657
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-22",
-      "fetched_at": "2026-11-11T19:53:02.670613+00:00",
+      "fetched_at": "2026-11-12T17:33:43.447521+00:00",
       "sha256": "efdb3457749681d91f24efc303b87fb27778f133770ea711bffe6efc44ca60ad",
       "bytes": 67904
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-23",
-      "fetched_at": "2026-11-11T19:53:02.669048+00:00",
+      "fetched_at": "2026-11-12T17:33:43.481932+00:00",
       "sha256": "de92fc7f8b979bc1e56204ae35b0ed315dea591c2c06496808f64f02518111e5",
       "bytes": 23953
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-24",
-      "fetched_at": "2026-11-11T19:53:02.695740+00:00",
+      "fetched_at": "2026-11-12T17:33:43.544130+00:00",
       "sha256": "f5184a37a324c07faed1e4657fae5bb28123a593e3a57ccc2a1b290cf4a94605",
       "bytes": 76705
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-25",
-      "fetched_at": "2026-11-11T19:53:02.759904+00:00",
+      "fetched_at": "2026-11-12T17:33:43.614307+00:00",
       "sha256": "bc7e92096131528b382b25ee552a51d6648f26ac6b3342abf5b5a76706065935",
       "bytes": 25708
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-26",
-      "fetched_at": "2026-11-11T19:53:02.896377+00:00",
+      "fetched_at": "2026-11-12T17:33:43.711156+00:00",
       "sha256": "01687ed50042207ea972462758f612e02c813ac90efc5b0531c76e0c142bca21",
       "bytes": 87937
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-27",
-      "fetched_at": "2026-11-11T19:53:02.766593+00:00",
+      "fetched_at": "2026-11-12T17:33:43.560230+00:00",
       "sha256": "465ed7040e460c3e82bc3d820bd0d6c1189b365e6b208be15d089432990e6eb1",
       "bytes": 2500
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-28",
-      "fetched_at": "2026-11-11T19:53:02.773975+00:00",
+      "fetched_at": "2026-11-12T17:33:43.617305+00:00",
       "sha256": "7b4c8e2a4b63396f8a042fa39c83f9820d253cd0a8daaeabb91e799fa9b597a4",
       "bytes": 2499
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-29",
-      "fetched_at": "2026-11-11T19:53:02.722608+00:00",
+      "fetched_at": "2026-11-12T17:33:43.654971+00:00",
       "sha256": "99134c5a78d3fdfa327e2c92dd15185bf4a2b743e060e2615a1349c9a0343152",
       "bytes": 34019
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-09-30",
-      "fetched_at": "2026-11-11T19:53:02.872336+00:00",
+      "fetched_at": "2026-11-12T17:33:43.769957+00:00",
       "sha256": "01b5ef1576db6128ac4dde367d187ebb6779894336b912d33a90b928fb74cd36",
       "bytes": 27406
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-01",
-      "fetched_at": "2026-11-11T19:53:02.950124+00:00",
+      "fetched_at": "2026-11-12T17:33:43.805584+00:00",
       "sha256": "74a68c5025853aad23fe0225a9a32fb526b09cf521eaf455fc42cd8c582eaaf8",
       "bytes": 68725
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-02",
-      "fetched_at": "2026-11-11T19:53:02.946183+00:00",
+      "fetched_at": "2026-11-12T17:33:43.822448+00:00",
       "sha256": "d369151074eb0f3a063352653fcb9becbd5935e672dd2676ee2f09c85b5cc403",
       "bytes": 36182
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-03",
-      "fetched_at": "2026-11-11T19:53:03.000369+00:00",
+      "fetched_at": "2026-11-12T17:33:43.886184+00:00",
       "sha256": "2223e4331fffbd7dc108d6080fc3654da83825bc4c027c80285310e0eb60a2ac",
       "bytes": 90792
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-04",
-      "fetched_at": "2026-11-11T19:53:02.973730+00:00",
+      "fetched_at": "2026-11-12T17:33:43.930975+00:00",
       "sha256": "4c63ed01196ae1be8262a324a4646c485c7f5733f17402ddb14355b734f14d14",
       "bytes": 35253
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-05",
-      "fetched_at": "2026-11-11T19:53:03.031942+00:00",
+      "fetched_at": "2026-11-12T17:33:43.961310+00:00",
       "sha256": "02f839caf43e4e01ef4a0361491a8009b32efdc47a7cd76ce61d5d3a061ae030",
       "bytes": 26001
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-06",
-      "fetched_at": "2026-11-11T19:53:03.103099+00:00",
+      "fetched_at": "2026-11-12T17:33:44.068733+00:00",
       "sha256": "14eda56a522b88b1065c617461a6dad48ce5b8ee6bd184be565262d089ed8910",
       "bytes": 73708
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-07",
-      "fetched_at": "2026-11-11T19:53:03.113076+00:00",
+      "fetched_at": "2026-11-12T17:33:44.037025+00:00",
       "sha256": "0dc08ea7c03ac70883984bb9519ce82dde60b2dcf98f1cc0d4123e0b3108e952",
       "bytes": 24654
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-08",
-      "fetched_at": "2026-11-11T19:53:03.173084+00:00",
+      "fetched_at": "2026-11-12T17:33:44.085780+00:00",
       "sha256": "d8c483929a6d04a325f3346c734159fd44664bf0278a2da678565e295d62c1ba",
       "bytes": 73584
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-09",
-      "fetched_at": "2026-11-11T19:53:03.153413+00:00",
+      "fetched_at": "2026-11-12T17:33:44.077282+00:00",
       "sha256": "e2a3faada5499d48380caca6673c8c42da107e695440b25e5fac4beda9973d8d",
       "bytes": 30307
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-10",
-      "fetched_at": "2026-11-11T19:53:03.233096+00:00",
+      "fetched_at": "2026-11-12T17:33:44.210240+00:00",
       "sha256": "3eb272be74411f27d96d260b20c7748a86257d227dd8125cf340ef3f18fec3d8",
       "bytes": 90616
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-11",
-      "fetched_at": "2026-11-11T19:53:03.216111+00:00",
+      "fetched_at": "2026-11-12T17:33:44.140744+00:00",
       "sha256": "a25f1a87279a54ea9072aa6b1588a2aabc92850a42bd5b29d355dc3b59618243",
       "bytes": 27082
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-12",
-      "fetched_at": "2026-11-11T19:53:03.283677+00:00",
+      "fetched_at": "2026-11-12T17:33:44.239691+00:00",
       "sha256": "0ec881691d56810469175b5b2c10f196b1a65304d27cda4f6e21ce61d946b166",
       "bytes": 24525
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-13",
-      "fetched_at": "2026-11-11T19:53:03.679335+00:00",
+      "fetched_at": "2026-11-12T17:33:44.271468+00:00",
       "sha256": "cf5c8327e027d04333e09fd65b9a140f8763760fb5e210d60d1c8054b1ff9095",
       "bytes": 128816
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-14",
-      "fetched_at": "2026-11-11T19:53:03.327370+00:00",
+      "fetched_at": "2026-11-12T17:33:44.254739+00:00",
       "sha256": "8dae7884a9bb59d2f1be7625c4730e561eb059c4850a478f7321768acf779414",
       "bytes": 17306
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-15",
-      "fetched_at": "2026-11-11T19:53:03.377320+00:00",
+      "fetched_at": "2026-11-12T17:33:44.486375+00:00",
       "sha256": "8ed892404aacca8db62a5cfc5c07aafc3ac24f832f7e122ee049017985bcb183",
       "bytes": 82048
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-16",
-      "fetched_at": "2026-11-11T19:53:03.380369+00:00",
+      "fetched_at": "2026-11-12T17:33:44.436186+00:00",
       "sha256": "ccc45b00d82ee59da1e176c6421083c88737467f8d70a0619202cbab7e0869c2",
       "bytes": 17804
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-17",
-      "fetched_at": "2026-11-11T19:53:03.481831+00:00",
+      "fetched_at": "2026-11-12T17:33:44.429033+00:00",
       "sha256": "77c268c8444f011f0fff23526a09f540325e9c22fb6fa18a5e3322e4c84a9c1b",
       "bytes": 98225
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-18",
-      "fetched_at": "2026-11-11T19:53:03.449503+00:00",
+      "fetched_at": "2026-11-12T17:33:44.460304+00:00",
       "sha256": "0885c7c8688ce2fe0fa34ca204c33539d329dacf0e6d0f84e892683eb6b422b8",
       "bytes": 13667
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-19",
-      "fetched_at": "2026-11-11T19:53:03.516937+00:00",
+      "fetched_at": "2026-11-12T17:33:44.444631+00:00",
       "sha256": "b29bcbc524f73cf5e8953be77c5b74c145a446299ca17832c95e79607d860140",
       "bytes": 31948
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-20",
-      "fetched_at": "2026-11-11T19:53:03.486336+00:00",
+      "fetched_at": "2026-11-12T17:33:44.547234+00:00",
       "sha256": "c6d123957ee6fa0b23105db99ba60b0f1bf1a2471e39c1c7a1c64610c499110b",
       "bytes": 83703
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-21",
-      "fetched_at": "2026-11-11T19:53:03.531112+00:00",
+      "fetched_at": "2026-11-12T17:33:44.598777+00:00",
       "sha256": "494ae79ec00fb47819abe5d7e5d088354df0c3d508590c6f6f34529f348af3c4",
       "bytes": 14669
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-22",
-      "fetched_at": "2026-11-11T19:53:03.675914+00:00",
+      "fetched_at": "2026-11-12T17:33:44.633259+00:00",
       "sha256": "58484c31167bf0d17db446ffece0f961766d5028e78cb5ee45bb99f0c1d7ab4e",
       "bytes": 93090
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-23",
-      "fetched_at": "2026-11-11T19:53:03.643712+00:00",
+      "fetched_at": "2026-11-12T17:33:44.671398+00:00",
       "sha256": "bc1f9495646d68a5b492c3ded09b998b055c0c0d28053f14054bcdc95f95d512",
       "bytes": 18579
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-24",
-      "fetched_at": "2026-11-11T19:53:03.709170+00:00",
+      "fetched_at": "2026-11-12T17:33:44.658191+00:00",
       "sha256": "e77ad9b528e1982133949c06d7514294175b6a26e551c067393f99c35a442275",
       "bytes": 94564
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-25",
-      "fetched_at": "2026-11-11T19:53:03.706493+00:00",
+      "fetched_at": "2026-11-12T17:33:44.655405+00:00",
       "sha256": "8e78b879a3ba6264ae478dae18bf493a92627218f7036956f7dc4b6d6f9363c5",
       "bytes": 38383
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-26",
-      "fetched_at": "2026-11-11T19:53:03.709046+00:00",
+      "fetched_at": "2026-11-12T17:33:44.722746+00:00",
       "sha256": "61688bbc82270ae5dd14e56a1e588693c1ce8c01cd3dc2b83eb56abc89ecf30d",
       "bytes": 28210
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-27",
-      "fetched_at": "2026-11-11T19:53:03.695518+00:00",
+      "fetched_at": "2026-11-12T17:33:44.712570+00:00",
       "sha256": "9f02f092aaf99db74be260a213fb960a6fa116236fe7625fa9a994a7ef654e60",
       "bytes": 69219
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-28",
-      "fetched_at": "2026-11-11T19:53:03.858115+00:00",
+      "fetched_at": "2026-11-12T17:33:44.867531+00:00",
       "sha256": "4f9b4bbf6fe5531ffb3daf953cf69c58a1628bb75c3c0a2316e40832bea5e7a6",
       "bytes": 32797
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-29",
-      "fetched_at": "2026-11-11T19:53:03.904299+00:00",
+      "fetched_at": "2026-11-12T17:33:44.860945+00:00",
       "sha256": "70d61781111204ae332dbf3d1036d71c6fcfff515aa4b279895f9a04a06ef668",
       "bytes": 93173
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-30",
-      "fetched_at": "2026-11-11T19:53:03.749241+00:00",
+      "fetched_at": "2026-11-12T17:33:44.856696+00:00",
       "sha256": "c8e0b73416092cf61a71f186286655201c3990e390a9a4f8e6314868bb754d7a",
       "bytes": 26751
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-10-31",
-      "fetched_at": "2026-11-11T19:53:03.756467+00:00",
+      "fetched_at": "2026-11-12T17:33:44.853921+00:00",
       "sha256": "8a03e41734a0597c2f59c0c953db6be4bfdc34da25a21ca8034035d9dd703298",
       "bytes": 78689
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-01",
-      "fetched_at": "2026-11-11T19:53:03.761362+00:00",
+      "fetched_at": "2026-11-12T17:33:44.887347+00:00",
       "sha256": "d900da4461ecb43ca83109bfe502cba7beb5fe18124231e59993045cc4d70591",
       "bytes": 44304
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-02",
-      "fetched_at": "2026-11-11T19:53:03.911030+00:00",
+      "fetched_at": "2026-11-12T17:33:44.908201+00:00",
       "sha256": "1ed1043fbd544f506731eb373546bd12814447580fa29efd7e91145d7aa6698d",
       "bytes": 29254
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-03",
-      "fetched_at": "2026-11-11T19:53:03.802575+00:00",
+      "fetched_at": "2026-11-12T17:33:45.128113+00:00",
       "sha256": "c97f41f277c3132ed4d869d3d130332ad3083cbdc77a0fb5d365c540a929e545",
       "bytes": 88247
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-04",
-      "fetched_at": "2026-11-11T19:53:03.817900+00:00",
+      "fetched_at": "2026-11-12T17:33:44.964375+00:00",
       "sha256": "8097561f4bf06abaa8e2a5c12b276370be89f7bf8b0bc6dd52fd26024066cea5",
       "bytes": 29762
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-05",
-      "fetched_at": "2026-11-11T19:53:03.820333+00:00",
+      "fetched_at": "2026-11-12T17:33:44.983989+00:00",
       "sha256": "8957add75aaf23b3a3172c2a1d77bf259c9eb7cec650fd47c4975d9cc3fba9c9",
       "bytes": 85807
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-06",
-      "fetched_at": "2026-11-11T19:53:03.851783+00:00",
+      "fetched_at": "2026-11-12T17:33:44.986514+00:00",
       "sha256": "dc7866fcf95995240de83387d2da6c9a4fa3ef7d5ad2b52f4c53982d64d306db",
       "bytes": 25440
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-07",
-      "fetched_at": "2026-11-11T19:53:03.868595+00:00",
+      "fetched_at": "2026-11-12T17:33:45.023931+00:00",
       "sha256": "e4ae84ddc7fb10ad4cf285acd29e517255d179b0db806fbb51964b2abf90b1cb",
       "bytes": 94137
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-08",
-      "fetched_at": "2026-11-11T19:53:03.849740+00:00",
+      "fetched_at": "2026-11-12T17:33:45.047662+00:00",
       "sha256": "0b4e3b387db7be03017772017cdf63fd032d57a64a2ec7a759f28d5ffb7d4c0d",
       "bytes": 44228
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-09",
-      "fetched_at": "2026-11-11T19:53:03.910354+00:00",
+      "fetched_at": "2026-11-12T17:33:45.074138+00:00",
       "sha256": "983a3603add9e853a8acc563072339a7f076a102c9b36d9de7d9f4b701860379",
       "bytes": 18566
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-10",
-      "fetched_at": "2026-11-11T19:53:03.880817+00:00",
+      "fetched_at": "2026-11-12T17:33:45.110577+00:00",
       "sha256": "c9f7a8c6b713b56e3c790660ce77701b0754dd4102d91318abe1423f2e27a8d1",
       "bytes": 46529
     },
     {
       "url": "https://api-web.nhle.com/v1/score/2026-11-11",
-      "fetched_at": "2026-11-11T19:53:03.883104+00:00",
-      "sha256": "e4dd86934681b8a7837075ce4dddff805a0c91cbde3ef02d7ba131f378e32917",
-      "bytes": 22258
+      "fetched_at": "2026-11-12T17:33:45.035264+00:00",
+      "sha256": "6c44cca90274b0a27af45992067a331c8234326f7d84eddc93ab8866c034111b",
+      "bytes": 47746
+    },
+    {
+      "url": "https://api-web.nhle.com/v1/score/2026-11-12",
+      "fetched_at": "2026-11-12T17:33:45.069949+00:00",
+      "sha256": "b0dd2b62e9f1efbcd1ddbdf2fe9868b6c3d7e86f24ed544f652c805223700f18",
+      "bytes": 38483
     },
     {
       "url": "https://peter-tanner.com/moneypuck/downloads/shots_2026.zip",
-      "fetched_at": "2026-11-11T19:53:04.043448+00:00",
-      "sha256": "452121c095e36307fee6abe269e3e7f24db44b019d0f5ee6bd2795ca80fc808b",
-      "bytes": 3911006
+      "fetched_at": "2026-11-12T17:33:45.368499+00:00",
+      "sha256": "e2b30cb3f4e94f01c868f151e47146dd1e7fc53dae12d29f86b8df5f5c7cd3b0",
+      "bytes": 3992939
     }
   ]
 }
