@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "requested_for_date": "2026-11-13",
-  "requested_at": "2026-11-14T03:39:45Z",
+  "requested_for_date": "2026-11-14",
+  "requested_at": "2026-11-14T12:06:28Z",
   "attempt": 1,
-  "reason": "One-time marker-only acceptance check after successful installation; preserve all frozen picks"
+  "reason": "First morning recovery check: latest report still Nov 13; fully paginated runs show no active daily workflow"
 }
