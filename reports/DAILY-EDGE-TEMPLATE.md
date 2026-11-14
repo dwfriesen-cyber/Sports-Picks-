@@ -52,3 +52,13 @@ This document defines the human-readable report presentation and regular-chat ha
 - Keep quoted sportsbook odds as source-specific snapshots, never imply PlayNow was checked unless proven. Show unavailable where source cannot be verified.
 - No unsourced winners, scores, profitability, winning percentage, injuries, market values or historical head-to-head game details.
 - Do not merge code, alter betting ledgers, change automation, or make public policy changes as part of simply presenting a Daily Edge.
+
+## November 14 repair — distinguish an unfinished value engine from a market pass
+
+The morning pick-publication repair does not implement betting calibration. Keep the honest no-ticket safety gate, but report why it applies accurately:
+
+- **VALUE EVALUATION BLOCKED / no ticket:** required calibrated probability, validation artifact, comparable timestamped price, or declared decision rule is missing. Name the exact missing component and engineering status. Do not say the market was evaluated and no positive-EV candidate was found when the calculation could not run. Do not repeatedly present the missing component as an unexplained market outcome.
+- **NO QUALIFYING VALUE / no ticket:** a complete, identified, validated evaluation actually ran on current pregame quotes and every candidate failed the predeclared rule. Report evaluated count and the rule; this is a legitimate decision, not a data failure.
+- **RESEARCH WATCH:** exploratory/calibration candidates may be shown separately, but must not be labeled proven profitable, original-model probabilities, executable PlayNow prices, or a qualifying ticket. Preserve original picks and ledgers.
+
+As of this repair, the pinned production NHL engine generates V6 selections and V7-A ranking scores, not calibrated win probabilities. The isolated `research/independent-evaluation-odds-v1` module is research, not an active value-selection service. Historical win rates and NFL V1 margins must not substitute for a calibrated per-game probability. Section 6 may honestly remain without a ticket while the missing service is completed; no forced parlay or backdated odds.
