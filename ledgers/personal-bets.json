@@ -336,6 +336,49 @@
       "matched_assistant_ticket": false,
       "verification_needed": null,
       "time_local": "07:35"
+    },
+    {
+      "date": "2026-11-14",
+      "time_local": "08:30",
+      "timezone": "America/Regina",
+      "description": "Four-fold parlay: Winnipeg Jets ML / Tampa Bay Lightning ML / Utah Mammoth ML / NY Islanders at Anaheim Ducks over 6.5 total goals",
+      "stake": 5,
+      "odds": 6.57,
+      "potential_return": 32.87,
+      "potential_profit": 27.87,
+      "status": "pending",
+      "legs": [
+        {
+          "pick": "Winnipeg Jets ML",
+          "odds": 1.66,
+          "game": "Winnipeg Jets at Chicago Blackhawks",
+          "scheduled_time_local": "14:30"
+        },
+        {
+          "pick": "Tampa Bay Lightning ML",
+          "odds": 1.45,
+          "game": "Detroit Red Wings at Tampa Bay Lightning",
+          "scheduled_time_local": "18:00"
+        },
+        {
+          "pick": "Utah Mammoth ML",
+          "odds": 1.51,
+          "game": "San Jose Sharks at Utah Mammoth",
+          "scheduled_time_local": "20:00"
+        },
+        {
+          "pick": "Over 6.5 total goals",
+          "market_type": "total goals",
+          "odds": 1.8,
+          "game": "New York Islanders at Anaheim Ducks",
+          "scheduled_time_local": "21:05"
+        }
+      ],
+      "cashout_snapshot": 4.5,
+      "cashout_snapshot_as_of": "2026-11-14 08:30 America/Regina",
+      "matched_assistant_ticket": false,
+      "source": "Owner-provided PlayNow My Bets > Pending screenshot, Saturday November 14, 2026 at 8:30 AM Saskatchewan. Screenshot displayed 1 current pending bet and account balance $7.77.",
+      "settlement_note": "Ticket is pending as of screenshot; do not infer final leg outcomes, cash-out acceptance or sportsbook settlement. Displayed combined odds 6.57 and potential return $32.87 are retained as shown, even if product of rounded leg odds differs."
     }
   ],
   "summary": {
@@ -345,10 +388,14 @@
     "settled_stakes": 68,
     "settled_returns": 39.769999999999996,
     "settled_net": -28.23,
-    "pending_count": 3,
-    "pending_stakes": 7,
-    "available_balance": 14.77,
-    "starting_balance": 50
+    "pending_count": 4,
+    "pending_stakes": 12,
+    "available_balance": 7.77,
+    "starting_balance": 50,
+    "available_balance_as_of": "2026-11-14 08:30 America/Regina",
+    "current_pending_snapshot_count": 1,
+    "current_pending_snapshot_as_of": "2026-11-14 08:30 America/Regina",
+    "pending_ledger_caveat": "Older Oct 24-25 pending entries remain operator-unverified historical records, even though latest Nov 14 screenshot displays only one pending current ticket. Do not claim four currently pending at PlayNow."
   },
   "notes": [
     "已结算返还金额包含原始本金。",
@@ -361,7 +408,8 @@
     "2026-10-25 independent score verification: Oct 23 NC State ML loss was graded mathematically, while actual operator settlement remains unconfirmed; Oct 24 PIT/MIN legs won and KC +2.5 remains unplayed. Previously recorded balance is a historical screenshot, not live.",
     "2026-10-25 07:35 Saskatchewan screenshot shows three pending wagers and displayed $23.77 balance; cashout values are volatile snapshots, not settled returns. Four-leg $2 ticket fourth leg is obscured.",
     "2026-10-25 07:39 owner expanded screenshot identifies four-leg 5.58 ticket's full moneyline legs, including Minnesota 1.54; displayed account balance $21.77. Balance snapshot differs from earlier $23.77 and is not inferred from stakes.",
-    "Oct 26 at 12:35 PM Saskatchewan: PlayNow screenshot reports $14.77 displayed balance and a new $7 three-leg moneyline ticket at 4.29 with $30.08 potential return. Previous Oct 24–25 tickets still show pending in this ledger despite decisive losses; do not treat their status as operator-confirmed or report the old saved pending count as actual current PlayNow status."
+    "Oct 26 at 12:35 PM Saskatchewan: PlayNow screenshot reports $14.77 displayed balance and a new $7 three-leg moneyline ticket at 4.29 with $30.08 potential return. Previous Oct 24–25 tickets still show pending in this ledger despite decisive losses; do not treat their status as operator-confirmed or report the old saved pending count as actual current PlayNow status.",
+    "Nov 14 08:30 Saskatchewan owner screenshot: PlayNow displayed exactly one pending $5 four-fold (Winnipeg ML 1.66, Tampa Bay ML 1.45, Utah ML 1.51, NYI-Anaheim over 6.5 goals 1.80), combined 6.57, potential return $32.87, cash-out offer $4.50, available balance $7.77. Older three saved pending entries are stale/unreconciled; do not interpret saved pending count as current account pending count. No sportsbook settlement or cash-out accepted."
   ],
   "language": "zh-CN",
   "display_language": "简体中文",
