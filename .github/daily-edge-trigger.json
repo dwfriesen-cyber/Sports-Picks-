@@ -1,0 +1,7 @@
+{
+  "schema_version": 1,
+  "requested_for_date": "2026-11-13",
+  "requested_at": "2026-11-14T03:40:00Z",
+  "attempt": 0,
+  "reason": "Install independent recovery trigger; existing frozen picks remain immutable"
+}

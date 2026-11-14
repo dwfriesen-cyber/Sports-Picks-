@@ -11,7 +11,7 @@ on:
     # 2026-10-24 recovery trigger: scheduled window missed; model/input SHA and freeze guards unchanged.
   push:
     branches: [main]
-    paths: [.github/workflows/daily-picks.yml]
+    paths: [.github/workflows/daily-picks.yml, .github/daily-edge-trigger.json]
 permissions:
   contents: write
 concurrency:

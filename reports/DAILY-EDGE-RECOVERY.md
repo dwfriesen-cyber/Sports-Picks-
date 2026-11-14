@@ -1,0 +1,9 @@
+# Daily Edge independent recovery
+
+The 7 AM Saskatchewan report depends on a current-day pregame freeze. GitHub schedule dispatch has arrived hours late. A separate dot check at 06:10 and 06:40 America/Regina may update `.github/daily-edge-trigger.json` on main to trigger the existing daily workflow by push. This is independent of GitHub cron dispatch, not a guarantee against runner or upstream-data outages.
+
+Before a write, retrieve `picks-data/latest.json`. If report_date is today's Saskatchewan date and NHL status is `frozen` (nonempty eligible picks, correct model identity and frozen_at before every start_time) or `no_games`, do not dispatch. Check recent runs, paginate if necessary, and do not dispatch while this daily workflow is queued/in progress/waiting. On a previous request with uncertain delivery, inspect the marker and runs instead of repeating it. Maximum two recovery marker writes per local date, at most one per check. Do not rewrite workflows, formulas or ledger history. Use the marker's current blob SHA for a conditional update. The JSON must retain schema_version, requested_for_date, requested_at UTC, attempt (1 or 2 for that date) and reason. A new date resets attempt to 1. Observe the exact resulting push run and verify the same-day freeze after it ends.
+
+The existing concurrency group serializes writers. The pinned source remains 073a17d3849db83f684a8273dec77993742eec5d. Immutable freeze and state validation safeguards remain untouched: a late missing slate is refused, a saved freeze is returned unchanged. Missing inputs must remain visibly blocked, never replaced by stale picks. Standard ubuntu-latest runner and 15-minute job cap unchanged.
+
+Read-only notification if still blocked: record specific data/run error for the 7 AM report; do not send duplicate reports or place bets. A prospective model pick is not a calibrated betting edge. NFL V3 recovery and personal/ticket accounting are separate work.
