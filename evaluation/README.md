@@ -52,3 +52,8 @@ The archive writes a SHA-256 content-addressed JSON receipt using exclusive crea
 ## Scope limitations
 
 This prototype is intentionally strict and incomplete: it only supports full-game moneylines, requires user-supplied genuine quote receipts, and has no autonomous collection or bankroll-risk simulation. Missing prices are reported as gaps. It is not proof of profitable betting.
+
+
+## November 14 research implementation
+
+`calibration_audit.py` now adds a read-only chronological calibration audit using the original V6 margin and immutable forecast-hash-matched results. It is a separate research model, not promoted calibration or a live value-selection service. See [measured repair and remaining blockers](REPAIR-20261114.md). The price collector, approval of calibration adequacy, price-margin policy and production integration remain absent; no betting recommendation should be inferred from this addition.
