@@ -18,7 +18,7 @@ concurrency:
   group: sports-picks-daily-ledger
   cancel-in-progress: false
 env:
-  SPORTS_SOURCE_SHA: 073a17d3849db83f684a8273dec77993742eec5d
+  SPORTS_SOURCE_SHA: c69c400f385897f52028e5cb4837dc68162baaff
   SCHEDULED_CRON: ${{ github.event.schedule }}
 jobs:
   daily:
