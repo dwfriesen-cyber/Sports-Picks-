@@ -46,6 +46,22 @@ def freeze_nfl(games,root,now,code,freeze_clock):
         slates.append(freeze(path,picks,freeze_clock(),ih,code,'nfl_v1_only'))
     return {'v1_status':'frozen' if slates else 'missed','week':week,'slates':slates,'missed_dates':missed,'v3_status':'blocked','reason':nfl.NFL_V3_BLOCKER,'weekly_confidence_rankings':None}
 
+def preserved_nfl(root,schedule,now):
+    """Read original active-week freezes only; never calculate or write a pick."""
+    future=[g for g in schedule if timestamp(g['start_time'])>now]
+    if not future:return {'frozen_status':'unavailable','slates':[]}
+    next_game=min(future,key=lambda g:timestamp(g['start_time']))
+    week,year=next_game['week'],next_game['season'];slates=[]
+    active_ids={g['game_id'] for g in schedule if g['week']==week and g['season']==year}
+    for path in sorted((root/'frozen'/'nfl').glob('*.json')):
+        slate=json.loads(path.read_text());picks=slate.get('picks',[])
+        if not picks or not all(p.get('week')==week and p.get('game_id') in active_ids for p in picks):continue
+        if slate.get('kind')!='nfl_v1_only':raise ValueError('Frozen slate kind mismatch')
+        if timestamp(slate['frozen_at'])>=min(timestamp(p['start_time']) for p in picks):raise ValueError('Saved NFL slate was not frozen before kickoff')
+        slates.append(slate)
+    return {'frozen_status':'preserved' if slates else 'unavailable','week':week,'slates':slates,
+            'note':'Original pregame freezes only. Fresh NFL inputs are blocked; no new NFL predictions or freezes were made.'}
+
 def run(root,source_dir,now=None,nhl_games=None,nfl_games=None,ice=None):
     fixed_clock=now is not None
     now=now or dt.datetime.now(dt.timezone.utc)
@@ -96,6 +112,19 @@ def run(root,source_dir,now=None,nhl_games=None,nfl_games=None,ice=None):
         if nfl_games is None:nfl_games=nfl.collect(year,source_dir)
         report['nfl']=freeze_nfl(nfl_games,root,now,code,clock)
         Path('reports/nfl-current-inputs.json').write_text(json.dumps(nfl_games,indent=2))
+    except nfl.IncompletePlayData as exc:
+        # This population may grade independent validated finals, but must never
+        # train a model or create a new slate while any source game is incomplete.
+        nfl_games=exc.validated_games
+        grading_inputs={'purpose':'grading_only','validated_games':nfl_games,'blocked_games':exc.blocked_games}
+        grading_hash=digest(grading_inputs)
+        append(root/'inputs'/('nfl-grading-'+grading_hash+'.json'),grading_inputs)
+        report['nfl']={'v1_status':'blocked','source_status':'blocked','grading_status':'partial',
+                       'reason':str(exc),'blocked_games':exc.blocked_games,
+                       'grading_input_sha256':grading_hash,
+                       'v3_status':'blocked','v3_reason':nfl.NFL_V3_BLOCKER,'weekly_confidence_rankings':None}
+        try:report['nfl'].update(preserved_nfl(root,exc.schedule,now))
+        except Exception as archive_error:report['nfl'].update(frozen_status='blocked',slates=[],archive_reason=str(archive_error))
     except Exception as exc:report['nfl']={'v1_status':'blocked','v3_status':'blocked','reason':str(exc),'v3_reason':nfl.NFL_V3_BLOCKER}
     # Grade independently of today's freeze success, preserving every prior forecast.
     report['grading']=grade(root,(nhl_games or [])+(nfl_games or []),clock())

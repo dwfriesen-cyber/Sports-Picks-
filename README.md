@@ -34,6 +34,10 @@ The scheduled launcher lives on `main`, pins an explicitly verified source commi
 
 Only `latest.json` may change. Git commits preserve history; no force pushes, deletions or replacement of audit records are allowed by the publishing script. These are application-enforced append-only records, not a claim of administrator-proof WORM storage.
 
+If NFL schedule scores arrive before complete play-by-play, V1/source refresh stays **blocked**, while independently validated games can still be graded. Validation requires matching scores, paired nonzero play counts and a terminal `END GAME` row. `nfl.blocked_games` lists every quarantined scored game; none is graded from schedule scores alone. A content-addressed `nfl-grading-*` input records the partial grading population, not forecast inputs.
+
+On this partial-data path, `nfl.frozen_status: preserved` and `nfl.slates` expose only original active-week pregame freezes with their original timestamps. They are not refreshed predictions. No new NFL forecast or freeze is created; `nfl.grading_status: partial` warns that totals exclude blocked games, and the workflow still reports failure. Source recovery resumes normal processing automatically. V3 remains separately blocked. See `reports/nfl-partial-source-repair-2026-11-15.md`.
+
 Historical xG downloads can contain retrospective source revisions. Excluding future games prevents lookahead in the calculations; it cannot establish the original publication time of each source estimate. Current historical downloads reproduce the saved audits to numerical tolerance. The October reconstruction is not represented as originally timestamped live forecasting.
 
 Data credits: NHL official API; **MoneyPuck.com** downloadable shot data (noncommercial use); IceScope public processed metrics; nflverse/nfldata and nflverse/nflverse-data; the original historical NFL team context from antonwilms/sleeper-dashboard-data. No account credentials or premium feeds are needed.

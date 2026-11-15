@@ -7,6 +7,19 @@ from sources import download,SourceError
 NFL_TEAMS=set('ARI ATL BAL BUF CAR CHI CIN CLE DAL DEN DET GB HOU IND JAX KC LA LAC LV MIA MIN NE NO NYG NYJ PHI PIT SEA SF TB TEN WAS'.split())
 NFL_V3_BLOCKER='Original fitted V1/V2 probability transforms, coefficients and V3 audit were not recoverable; no replacement confidence model is used.'
 
+class IncompletePlayData(SourceError):
+    """A failed refresh with independently validated games for grading only.
+
+    Never pass this partial population to replay or a new forecast freeze.
+    The full schedule is retained solely to locate existing archived slates.
+    """
+    def __init__(self,games,schedule,blocked_games):
+        self.validated_games=games
+        self.schedule=schedule
+        self.blocked_games=blocked_games
+        super().__init__('Incomplete NFL play data: '+'; '.join(
+            g['game_id']+': '+g['reason'] for g in blocked_games))
+
 def expected(team,opp,h):
     a,b=h[team],h[opp]
     if min(len(a),len(b))<3:return None
@@ -76,28 +89,38 @@ def parse_schedule(data,year):
 
 def parse_pbp(data,year,schedule):
     """Match original upstream countable plays: pass/rush, no no_play or 2pt."""
-    counts=defaultdict(lambda:defaultdict(lambda:{'op':0,'dp':0}));scores={}
+    counts=defaultdict(lambda:defaultdict(lambda:{'op':0,'dp':0}));scores={};last_description={}
     with gzip.GzipFile(fileobj=io.BytesIO(data)) as z:
         rows=csv.DictReader(io.TextIOWrapper(z))
-        required={'season','season_type','game_id','posteam','defteam','pass','rush','play_type','two_point_attempt','total_home_score','total_away_score'}
+        required={'season','season_type','game_id','posteam','defteam','pass','rush','play_type','two_point_attempt','total_home_score','total_away_score','desc'}
         if not required.issubset(rows.fieldnames):raise SourceError('NFL pbp schema drift')
         for r in rows:
             if r['season_type']!='REG':continue
             if int(r['season'])!=year:raise SourceError('Wrong NFL pbp season')
             gid=r['game_id']
+            last_description[gid]=r['desc'].strip()
             if r['total_home_score'] and r['total_away_score']:scores[gid]=(int(float(r['total_home_score'])),int(float(r['total_away_score'])))
             t,o=r['posteam'],r['defteam']
             if t and (float(r['pass'] or 0)==1 or float(r['rush'] or 0)==1) and r['play_type']!='no_play' and float(r['two_point_attempt'] or 0)!=1:
                 if t not in NFL_TEAMS or o not in NFL_TEAMS:raise SourceError('Unknown NFL pbp team')
                 counts[gid][t]['op']+=1;counts[gid][o]['dp']+=1
-    out=[]
+    out=[];blocked=[]
     for g in schedule:
-        if g['home_score'] is None:out.append(g);continue
+        if g['home_score'] is None and g['away_score'] is None:out.append(g);continue
         gid=g['game_id']
-        if scores.get(gid)!=(g['home_score'],g['away_score']):raise SourceError(f'Stale/incomplete NFL pbp scores: {gid}')
-        h=counts[gid][g['home']];a=counts[gid][g['away']]
-        row=dict(g,home_stats=dict(h,pf=g['home_score'],pa=g['away_score']),away_stats=dict(a,pf=g['away_score'],pa=g['home_score']))
-        validate_stats(row);out.append(row)
+        try:
+            if g['home_score'] is None or g['away_score'] is None:raise SourceError('Incomplete schedule score')
+            if scores.get(gid)!=(g['home_score'],g['away_score']):raise SourceError('Stale/incomplete NFL pbp scores')
+            # Matching scores alone do not prove all plays are present: a truncated
+            # game may already contain its last scoring play. Require the observed
+            # nflverse terminal marker, not an elapsed-clock or schedule-score guess.
+            if last_description.get(gid)!='END GAME':raise SourceError('NFL pbp terminal END GAME row missing')
+            h=counts[gid][g['home']];a=counts[gid][g['away']]
+            row=dict(g,home_stats=dict(h,pf=g['home_score'],pa=g['away_score']),away_stats=dict(a,pf=g['away_score'],pa=g['home_score']))
+            validate_stats(row);out.append(row)
+        except SourceError as exc:
+            blocked.append({'game_id':gid,'reason':str(exc)})
+    if blocked:raise IncompletePlayData(out,schedule,blocked)
     return out
 
 def collect(year,root):
