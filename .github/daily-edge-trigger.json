@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "requested_for_date": "2026-11-23",
-  "requested_at": "2026-11-23T12:11:59.415Z",
+  "requested_for_date": "2026-11-24",
+  "requested_at": "2026-11-24T12:10:05.274Z",
   "attempt": 1,
-  "reason": "First morning recovery check: latest report remains November 22; fully paginated 183 repository runs show no active workflows."
+  "reason": "First morning recovery check: latest report remains 2026-11-23; fully paginated 188 repository runs show no active workflows."
 }
