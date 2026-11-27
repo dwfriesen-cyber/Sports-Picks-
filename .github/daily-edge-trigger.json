@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "requested_for_date": "2026-11-26",
-  "requested_at": "2026-11-26T12:11:57.780Z",
+  "requested_for_date": "2026-11-27",
+  "requested_at": "2026-11-27T12:11:34.842Z",
   "attempt": 1,
-  "reason": "First morning recovery check: latest report still dated November 25; no active, waiting, queued, requested or pending repository runs."
+  "reason": "06:10 Saskatchewan recovery: latest report is dated November 26; no queued, in-progress, waiting, requested, or pending runs."
 }
